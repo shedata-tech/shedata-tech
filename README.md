@@ -1,15 +1,21 @@
 <div align="center">
 
-# 🌸 SHE DATA
+<img src="https://capsule-render.vercel.app/api?type=waving&height=300&color=F9A8D4&section=header&reversal=false&text=She+Data+%E2%99%A5&textBg=false&fontSize=70&fontAlign=50&fontAlignY=50&rotate=0&strokeWidth=0&descSize=20&descAlign=50&descAlignY=60" alt="She Data" width="360">
 
-<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=20&duration=3000&pause=1000&color=FF69B4&center=true&vCenter=true&width=600&lines=Comunidad+·+Datos+·+Tecnología+·+IA+%F0%9F%8C%B8" alt="Typing SVG" />
-<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=20&duration=3000&pause=1000&color=FF69B4&center=true&vCenter=true&width=600&lines=Data+Science+%2B+Machine+Learning;Building+AI-powered+backends;Barbiecore+meets+backend+%F0%9F%8C%B8" alt="Typing SVG" />
+<img src="https://readme-typing-svg.demolab.com/?font=Fira+Code&size=20&duration=3000&pause=1000&color=E85D9E&center=true&vCenter=true&width=600&lines=Comunidad+de+Datos;Tecnolog%C3%ADa+e+IA+%F0%9F%8C%B8" alt="Typing SVG" />
 
 **Que ninguna mujer tenga que aprender sola de nuevo.**
 
 <br>
 
-🌐 [shedata.tech](https://www.shedata.tech/) · 💻 [GitHub](https://github.com/shedatatech)
+<p align="center">
+  <a href="https://www.shedata.tech/">
+    <img src="https://img.shields.io/badge/🌐 shedata.tech-27232A?style=flat&labelColor=27232A&color=E85D9E" alt="She Data Website">
+  </a>
+  <a href="https://github.com/shedatatech">
+    <img src="https://img.shields.io/badge/💻 GitHub-27232A?style=flat&labelColor=27232A&color=C9B6E4" alt="She Data GitHub">
+  </a>
+</p>
 
 </div>
 
@@ -212,8 +218,13 @@ Y este GitHub es parte de ese camino.
 
 <br>
 
-🌐 [shedata.tech](https://www.shedata.tech/)
-
-💻 [github.com/shedatatech](https://github.com/shedatatech)
+<p align="center">
+  <a href="https://www.shedata.tech/">
+    <img src="https://img.shields.io/badge/🌐 shedata.tech-27232A?style=flat&labelColor=27232A&color=E85D9E" alt="She Data Website">
+  </a>
+  <a href="https://github.com/shedatatech">
+    <img src="https://img.shields.io/badge/💻 GitHub-27232A?style=flat&labelColor=27232A&color=C9B6E4" alt="She Data GitHub">
+  </a>
+</p>
 
 </div>
