@@ -2,7 +2,8 @@
 
 # 🌸 SHE DATA
 
-<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=20&duration=3000&pause=1000&color=FF69B4&center=true&vCenter=true&width=600&lines=Comunidad · Datos · Tecnología · IA+%F0%9F%8C%B8" alt="Typing SVG" />
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=20&duration=3000&pause=1000&color=FF69B4&center=true&vCenter=true&width=600&lines=Comunidad+·+Datos+·+Tecnología+·+IA+%F0%9F%8C%B8" alt="Typing SVG" />
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=20&duration=3000&pause=1000&color=FF69B4&center=true&vCenter=true&width=600&lines=Data+Science+%2B+Machine+Learning;Building+AI-powered+backends;Barbiecore+meets+backend+%F0%9F%8C%B8" alt="Typing SVG" />
 
 **Que ninguna mujer tenga que aprender sola de nuevo.**
 
