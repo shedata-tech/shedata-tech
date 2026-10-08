@@ -1,0 +1,1702 @@
+<!DOCTYPE html>
+<html lang="es" data-ui-lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SHE DATA — Sistema de Diseño &amp; Manual de Marca</title>
+  <meta name="description" content="SHE DATA Design System v1.0 — Paleta, tipografía, componentes, estados y tono. Que ninguna mujer tenga que aprender sola de nuevo." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- Same font stack as shedata.tech -->
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700;800&family=Caveat:wght@600;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+  <meta name="theme-color" content="#D51E74">
+
+  <link rel="icon" type="image/png" href="assets/logo.png">
+  <!-- 1) tokens + base   2) components   3) showcase page layout -->
+  <link rel="stylesheet" href="design-system.css" />
+  <link rel="stylesheet" href="componentes.css" />
+  <link rel="stylesheet" href="showcase.css" />
+</head>
+<body>
+  <!-- ========================================================================
+       TOP BAR
+       ======================================================================== -->
+  <header class="topbar">
+    <a class="logo" href="#top" aria-label="SHE DATA Design System">
+      <span class="logo-mark"><img src="assets/logo.png" alt=""></span>
+    </a>
+    <nav class="mainnav" aria-label="Main">
+      <ul>
+        <li><a href="#brand">marca</a></li>
+        <li><a href="#colors">color</a></li>
+        <li><a href="#typography">tipografia</a></li>
+        <li><a href="#buttons">botones</a></li>
+        <li><a href="#cards">cards</a></li>
+        <li><a href="#forms">forms</a></li>
+        <li><a href="#values">valores</a></li>
+        <li><a href="#voice">voz</a></li>
+      </ul>
+    </nav>
+    <div class="topbar-actions">
+      <button type="button" class="icon-btn" id="themeToggle" aria-label="Cambiar tema">
+        <svg class="i-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+        <svg class="i-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+      </button>
+      <a class="btn btn-dark" href="#top">
+        <span class="btn-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M8 2v4M16 2v4"/><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M3 10h18"/></svg>
+        </span>
+        Agenda
+      </a>
+      <a class="btn btn-primary" href="#top">
+        <span>♥ Únete</span>
+      </a>
+      <button type="button" class="menu-toggle" aria-label="Abrir menú">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- ====================================================================
+         HERO
+         ==================================================================== -->
+    <section class="hero-section" id="top">
+      <div class="page">
+        <span class="section-eyebrow">◆ Design System · v1.0 · Oct 2026</span>
+        <h1 class="hero-title">
+          SHE DATA
+          <span class="hl-pink">Sistema de Diseño</span>
+          &amp; Manual de Marca
+        </h1>
+        <p class="hero-script">Que ninguna aprenda sola.</p>
+        <p class="hero-tagline">
+          Documentación completa de la identidad visual de <a class="link" href="https://www.shedata.tech/">shedata.tech</a>: paleta, tipografía, espaciado, componentes y tono.
+          Pensado para que cualquiera en la comunidad pueda construir con nosotras sin perder la calidez.
+        </p>
+
+        <div class="btn-row">
+          <a class="btn btn-primary" href="#brand">Ver el sistema →</a>
+          <a class="btn btn-secondary" href="#voice">Leer la voz</a>
+        </div>
+
+        <div class="toc">
+          <strong>Índice</strong>
+          <ol>
+            <li><a href="#brand">Misión, valores y marca</a></li>
+            <li><a href="#logo">Logo</a></li>
+            <li><a href="#colors">Paleta de color</a></li>
+            <li><a href="#typography">Tipografía</a></li>
+            <li><a href="#spacing">Espaciado</a></li>
+            <li><a href="#radius">Bordes y radios</a></li>
+            <li><a href="#buttons">Botones</a></li>
+            <li><a href="#badges">Badges &amp; chips</a></li>
+            <li><a href="#topbar">Top bar</a></li>
+            <li><a href="#hero">Hero</a></li>
+            <li><a href="#testimonials">Testimonios</a></li>
+            <li><a href="#values">Valores (chips)</a></li>
+            <li><a href="#curiosidades">Curiosidades (scroller)</a></li>
+            <li><a href="#code">Code box &amp; stats</a></li>
+            <li><a href="#cards">Cards</a></li>
+            <li><a href="#paths">Learning paths</a></li>
+            <li><a href="#progress">Progress / poll</a></li>
+            <li><a href="#forms">Forms &amp; inputs</a></li>
+            <li><a href="#modal">Modal</a></li>
+            <li><a href="#sections">Section layouts</a></li>
+            <li><a href="#voice">Voz &amp; tono</a></li>
+            <li><a href="#a11y">Accesibilidad</a></li>
+            <li><a href="#footer">Footer</a></li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- 1. BRAND / MISSION -->
+    <section class="page block-section" id="brand">
+      <h2>Misión y valores</h2>
+      <p class="muted">Filosofía · Fundación de todo lo que sigue</p>
+
+      <article class="component">
+        <div class="component-header">
+          <h3>Misión</h3>
+          <div class="meta">Una frase · se usa siempre literal</div>
+        </div>
+        <div class="component-preview">
+          <p class="hero-script" style="margin:0;">Que ninguna mujer aprenda sola.</p>
+          <p style="margin-top: var(--sp-md); max-width: 42em;">
+            SHE DATA es un proyecto colaborativo e independiente basado en Medellín, Colombia, que acompaña a mujeres hispanohablantes en su entrada al mundo de los datos. Creamos espacios seguros donde se comparte conocimiento, se celebran logros y se construye comunidad.
+          </p>
+        </div>
+      </article>
+
+      <article class="component">
+        <div class="component-header">
+          <h3>Valores clave</h3>
+          <div class="meta">Cinco pilares · guían decisiones de producto y diseño</div>
+        </div>
+        <div class="component-preview">
+          <div class="grid grid-3">
+            <div class="kicker-card"><span class="ico">🫶</span><div><h3>Inclusión</h3><p>Acceso sin barreras para todas las mujeres.</p></div></div>
+            <div class="kicker-card"><span class="ico">🤝</span><div><h3>Colaboración</h3><p>Aprendemos juntas, no solas.</p></div></div>
+            <div class="kicker-card"><span class="ico">⚡</span><div><h3>Empoderamiento</h3><p>Transformamos trayectorias profesionales.</p></div></div>
+            <div class="kicker-card"><span class="ico">💬</span><div><h3>Autenticidad</h3><p>Celebramos dudas, procesos y brutalidad honesta.</p></div></div>
+            <div class="kicker-card"><span class="ico">♥</span><div><h3>Comunidad</h3><p>Espacios seguros y solidarios.</p></div></div>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <!-- 2. LOGO -->
+    <section class="page block-section" id="logo">
+      <h2>Logo</h2>
+      <p class="muted">design-system.css · .logo</p>
+
+      <article class="component">
+        <div class="component-header">
+          <h3>Isotipo (.logo-mark)</h3>
+          <div class="meta">Símbolo de mujer + código + nodos de datos · rosa #D51E74 sobre fondo transparente</div>
+        </div>
+        <div class="component-preview" style="display: flex; align-items: center; gap: var(--sp-xl); flex-wrap: wrap; justify-content: center; padding: var(--sp-xl);">
+          <div style="text-align: center;">
+            <span class="logo-mark" style="width: 120px; height: 120px;"><img src="assets/logo.png" alt="SHE DATA isotipo"></span>
+            <p class="caption" style="margin-top: 10px;">120px · hero</p>
+          </div>
+          <div style="text-align: center;">
+            <span class="logo-mark" style="width: 72px; height: 72px;"><img src="assets/logo.png" alt=""></span>
+            <p class="caption" style="margin-top: 10px;">72px · header grande</p>
+          </div>
+          <div style="text-align: center;">
+            <span class="logo-mark" style="width: 40px; height: 40px;"><img src="assets/logo.png" alt=""></span>
+            <p class="caption" style="margin-top: 10px;">40px · topbar</p>
+          </div>
+          <div style="text-align: center;">
+            <span class="logo-mark" style="width: 24px; height: 24px;"><img src="assets/logo.png" alt=""></span>
+            <p class="caption" style="margin-top: 10px;">24px · favicon</p>
+          </div>
+          <div style="text-align: center; background: var(--brand-dark); padding: var(--sp-md); border-radius: var(--r-md);">
+            <span class="logo-mark" style="width: 72px; height: 72px;"><img src="assets/logo.png" alt=""></span>
+            <p class="caption" style="margin-top: 10px; color: var(--pink-light);">sobre fondo oscuro</p>
+          </div>
+        </div>
+        <pre class="component-code"><span class="k">&lt;span</span> <span class="a">class</span>=<span class="s">"logo-mark"</span><span class="k">&gt;</span>
+  <span class="k">&lt;img</span> <span class="a">src</span>=<span class="s">"assets/logo.png"</span> <span class="a">alt</span>=<span class="s">"SHE DATA"</span><span class="k">/&gt;</span>
+<span class="k">&lt;/span&gt;</span></pre>
+        <div class="component-specs">
+          <strong>Specs:</strong> símbolo cuadrado · rosa <code>#D51E74</code> plano sobre transparente · tamaño mínimo 24×24px ·
+          contiene tres elementos: cabeza femenina estilizada, símbolo de código <code>&lt;/&gt;</code> y nodos de datos conectados.
+          Representa a la mujer + la tech + la comunidad.
+        </div>
+      </article>
+
+      <article class="component">
+        <div class="component-header">
+          <h3>Logotipo completo (.logo)</h3>
+          <div class="meta">Dualidad intencional · isotipo + "SHEDATA" rosa + ".TECH" negro</div>
+        </div>
+        <div class="component-preview" style="display: flex; align-items: center; gap: var(--sp-xl); flex-wrap: wrap;">
+          <a class="logo" style="font-size: 2.2rem;" href="#">
+            <span class="logo-mark"><img src="assets/logo.png" alt=""></span>
+            <span class="shedata">SHEDATA</span><span class="dot">.</span><span class="tech">TECH</span>
+          </a>
+          <a class="logo" style="font-size: 1.4rem;" href="#">
+            <span class="logo-mark"><img src="assets/logo.png" alt=""></span>
+            <span class="shedata">SHEDATA</span><span class="dot">.</span><span class="tech">TECH</span>
+          </a>
+          <a class="logo" style="font-size: 1rem;" href="#">
+            <span class="logo-mark"><img src="assets/logo.png" alt=""></span>
+            <span class="shedata">SHEDATA</span><span class="dot">.</span><span class="tech">TECH</span>
+          </a>
+        </div>
+        <pre class="component-code"><span class="k">&lt;a</span> <span class="a">class</span>=<span class="s">"logo"</span> <span class="a">href</span>=<span class="s">"#"</span><span class="k">&gt;</span>
+  <span class="k">&lt;span</span> <span class="a">class</span>=<span class="s">"logo-mark"</span><span class="k">&gt;&lt;img</span> <span class="a">src</span>=<span class="s">"assets/logo.png"</span> <span class="a">alt</span>=<span class="s">""</span><span class="k">/&gt;&lt;/span&gt;</span>
+  <span class="k">&lt;span</span> <span class="a">class</span>=<span class="s">"shedata"</span><span class="k">&gt;</span>SHEDATA<span class="k">&lt;/span&gt;&lt;span</span> <span class="a">class</span>=<span class="s">"dot"</span><span class="k">&gt;</span>.<span class="k">&lt;/span&gt;&lt;span</span> <span class="a">class</span>=<span class="s">"tech"</span><span class="k">&gt;</span>TECH<span class="k">&lt;/span&gt;</span>
+<span class="k">&lt;/a&gt;</span></pre>
+        <div class="component-specs">
+          <strong>Specs:</strong> Space Grotesk · 700 · letter-spacing -0.01em · gap 10px entre isotipo y wordmark ·
+          <code>.shedata</code> = <code>var(--brand-primary)</code> ·
+          <code>.tech</code> y <code>.dot</code> = <code>var(--brand-dark)</code>.
+          No somos solo "brujas" ni solo "tech" — somos ambas cosas.
+        </div>
+      </article>
+
+      <article class="component">
+        <div class="component-header">
+          <h3>Variantes solo-wordmark</h3>
+          <div class="meta">Cuando el espacio es muy angosto, o el isotipo ya aparece en otra parte</div>
+        </div>
+        <div class="component-preview" style="display: flex; align-items: center; gap: var(--sp-xl); flex-wrap: wrap;">
+          <a class="logo" style="font-size: 2rem;" href="#">
+            <span class="shedata">SHEDATA</span><span class="dot">.</span><span class="tech">TECH</span>
+          </a>
+          <a class="logo" style="font-size: 1.2rem;" href="#">
+            <span class="shedata">SHEDATA</span><span class="dot">.</span><span class="tech">TECH</span>
+          </a>
+        </div>
+        <pre class="component-code"><span class="c">&lt;!-- sin logo-mark --&gt;</span>
+<span class="k">&lt;a</span> <span class="a">class</span>=<span class="s">"logo"</span> <span class="a">href</span>=<span class="s">"#"</span><span class="k">&gt;</span>
+  <span class="k">&lt;span</span> <span class="a">class</span>=<span class="s">"shedata"</span><span class="k">&gt;</span>SHEDATA<span class="k">&lt;/span&gt;&lt;span</span> <span class="a">class</span>=<span class="s">"dot"</span><span class="k">&gt;</span>.<span class="k">&lt;/span&gt;&lt;span</span> <span class="a">class</span>=<span class="s">"tech"</span><span class="k">&gt;</span>TECH<span class="k">&lt;/span&gt;</span>
+<span class="k">&lt;/a&gt;</span></pre>
+      </article>
+
+      <article class="component">
+        <div class="component-header">
+          <h3>Decoradores sparkle (.sparkle)</h3>
+          <div class="meta">✦ sutiles al lado de elementos importantes · opacidad 30–50%</div>
+        </div>
+        <div class="component-preview">
+          <p style="font-size: 1.2rem;"><span class="sparkle">✦</span> Hitos de la comunidad <span class="sparkle">✦</span></p>
+          <p><span class="sparkle purple">✦</span> Tema brujas (púrpura claro) <span class="sparkle purple">✦</span></p>
+        </div>
+        <pre class="component-code"><span class="k">&lt;span</span> <span class="a">class</span>=<span class="s">"sparkle"</span><span class="k">&gt;</span>✦<span class="k">&lt;/span&gt;</span>
+<span class="k">&lt;span</span> <span class="a">class</span>=<span class="s">"sparkle purple"</span><span class="k">&gt;</span>✦<span class="k">&lt;/span&gt;</span></pre>
+      </article>
+    </section>
+
+    <!-- 3. COLORS -->
+    <section class="page block-section" id="colors">
+      <h2>Paleta de color</h2>
+      <p class="muted">design-system.css · :root tokens</p>
+
+      <div class="color-grid">
+        <div class="color-group-label">◆ Primarios</div>
+        <div class="color-card"><div class="color-swatch" style="background:#D51E74;"></div><div class="color-info"><div class="color-name">Brand Primary</div><div class="color-hex">--brand-primary · #D51E74</div></div></div>
+        <div class="color-card"><div class="color-swatch" style="background:#1A1A1A;"></div><div class="color-info"><div class="color-name">Brand Dark</div><div class="color-hex">--brand-dark · #1A1A1A</div></div></div>
+        <div class="color-card"><div class="color-swatch" style="background:#8B4789;"></div><div class="color-info"><div class="color-name">Brand Secondary</div><div class="color-hex">--brand-secondary · #8B4789</div></div></div>
+
+        <div class="color-group-label">◆ Soporte</div>
+        <div class="color-card"><div class="color-swatch" style="background:#F0B8D4;"></div><div class="color-info"><div class="color-name">Pink Light</div><div class="color-hex">--pink-light · #F0B8D4</div></div></div>
+        <div class="color-card"><div class="color-swatch" style="background:#FDE8F3;"></div><div class="color-info"><div class="color-name">Pink Lightest</div><div class="color-hex">--pink-lightest · #FDE8F3</div></div></div>
+        <div class="color-card"><div class="color-swatch" style="background:#C9B6E4;"></div><div class="color-info"><div class="color-name">Purple Light</div><div class="color-hex">--purple-light · #C9B6E4</div></div></div>
+        <div class="color-card"><div class="color-swatch" style="background:#34D399;"></div><div class="color-info"><div class="color-name">Success</div><div class="color-hex">--success · #34D399</div></div></div>
+
+        <div class="color-group-label">◆ Neutros</div>
+        <div class="color-card"><div class="color-swatch" style="background:#F8F7FB; border-bottom:1px solid var(--border);"></div><div class="color-info"><div class="color-name">Surface</div><div class="color-hex">--surface · #F8F7FB</div></div></div>
+        <div class="color-card"><div class="color-swatch" style="background:#F0EEF7;"></div><div class="color-info"><div class="color-name">Surface Dark</div><div class="color-hex">--surface-dark · #F0EEF7</div></div></div>
+        <div class="color-card"><div class="color-swatch" style="background:#FFFFFF; border-bottom:1px solid var(--border);"></div><div class="color-info"><div class="color-name">Surface Pure</div><div class="color-hex">--surface-pure · #FFFFFF</div></div></div>
+        <div class="color-card"><div class="color-swatch" style="background:#2D2D2D;"></div><div class="color-info"><div class="color-name">Text Primary</div><div class="color-hex">--text-primary · #2D2D2D</div></div></div>
+        <div class="color-card"><div class="color-swatch" style="background:#6B6B6B;"></div><div class="color-info"><div class="color-name">Text Secondary</div><div class="color-hex">--text-secondary · #6B6B6B</div></div></div>
+        <div class="color-card"><div class="color-swatch" style="background:#D4D0E0;"></div><div class="color-info"><div class="color-name">Border</div><div class="color-hex">--border · #D4D0E0</div></div></div>
+
+        <div class="color-group-label">◆ Tema oscuro (toggle)</div>
+        <div class="color-card"><div class="color-swatch" style="background:#FF5FA8;"></div><div class="color-info"><div class="color-name">Brand Primary (dark)</div><div class="color-hex">#FF5FA8</div></div></div>
+        <div class="color-card"><div class="color-swatch" style="background:#1A1A1F;"></div><div class="color-info"><div class="color-name">Surface (dark)</div><div class="color-hex">#1A1A1F</div></div></div>
+        <div class="color-card"><div class="color-swatch" style="background:#25242B;"></div><div class="color-info"><div class="color-name">Surface Dark (dark)</div><div class="color-hex">#25242B</div></div></div>
+      </div>
+    </section>
+
+    <!-- 4. TYPOGRAPHY -->
+    <section class="page block-section" id="typography">
+      <h2>Tipografía</h2>
+      <p class="muted">design-system.css · 4 familias · altura 1.5 body · 1.2 head</p>
+
+      <div class="type-sample">
+        <div class="type-label">var(--f-head) · Space Grotesk · 700</div>
+        <h1 style="margin: 0;">No naciste sabiendo.</h1>
+      </div>
+      <div class="type-sample">
+        <div class="type-label">var(--f-body) · ui-sans-serif system stack · 400 · 16px</div>
+        <p style="font-size: var(--fs-body); margin: 0;">
+          SHE DATA es la comunidad hispanohablante donde las mujeres entran a los datos sin tener que empezar solas.
+        </p>
+      </div>
+      <div class="type-sample">
+        <div class="type-label">var(--f-hand) · Caveat · itálica · énfasis emocional</div>
+        <p style="font-family: var(--f-hand); font-size: 1.8rem; font-style: italic; color: var(--brand-primary); margin: 0; line-height: 1.1;">
+          Nosotras tampoco. ♥
+        </p>
+      </div>
+      <div class="type-sample">
+        <div class="type-label">var(--f-mono) · JetBrains Mono · 500 · solo código</div>
+        <p style="font-family: var(--f-mono); margin: 0;">
+          &gt;&gt;&gt; comunidad.describe()
+        </p>
+      </div>
+
+      <h3 style="margin-top: var(--sp-xl);">Escala de texto</h3>
+      <table class="scale-table">
+        <thead>
+          <tr><th>Nivel</th><th>Tamaño</th><th>Peso</th><th>Familia</th><th>Preview</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><span class="tok">H1</span></td><td>36px</td><td>700</td><td>Space Grotesk</td><td><span class="sample" style="font-size: 36px; font-weight: 700;">Aa</span></td></tr>
+          <tr><td><span class="tok">H2</span></td><td>28px</td><td>700</td><td>Space Grotesk</td><td><span class="sample" style="font-size: 28px; font-weight: 700;">Aa</span></td></tr>
+          <tr><td><span class="tok">H3</span></td><td>22px</td><td>600</td><td>Space Grotesk</td><td><span class="sample" style="font-size: 22px; font-weight: 600;">Aa</span></td></tr>
+          <tr><td><span class="tok">Body Large</span></td><td>18px</td><td>400</td><td>System UI</td><td><span style="font-size: 18px;">Aa</span></td></tr>
+          <tr><td><span class="tok">Body</span></td><td>16px</td><td>400</td><td>System UI</td><td><span style="font-size: 16px;">Aa</span></td></tr>
+          <tr><td><span class="tok">Body Small</span></td><td>14px</td><td>400</td><td>System UI</td><td><span style="font-size: 14px;">Aa</span></td></tr>
+          <tr><td><span class="tok">Caption</span></td><td>12px</td><td>400</td><td>System UI</td><td><span style="font-size: 12px;">Aa</span></td></tr>
+          <tr><td><span class="tok">Emphasis</span></td><td>16px</td><td>400</td><td>Caveat (itálica)</td><td><span style="font-family: var(--f-hand); font-style: italic; color: var(--brand-primary); font-size: 20px;">Aa</span></td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- 5. SPACING -->
+    <section class="page block-section" id="spacing">
+      <h2>Espaciado</h2>
+      <p class="muted">design-system.css · escala de 6 niveles</p>
+      <div class="sp-grid">
+        <div class="sp-card"><div class="sp-swatch" style="width: 4px;"></div><div class="sp-name">xs</div><div class="sp-value">4px · var(--sp-xs)</div></div>
+        <div class="sp-card"><div class="sp-swatch" style="width: 8px;"></div><div class="sp-name">sm</div><div class="sp-value">8px · var(--sp-sm)</div></div>
+        <div class="sp-card"><div class="sp-swatch" style="width: 16px;"></div><div class="sp-name">md</div><div class="sp-value">16px · var(--sp-md)</div></div>
+        <div class="sp-card"><div class="sp-swatch" style="width: 24px;"></div><div class="sp-name">lg</div><div class="sp-value">24px · var(--sp-lg)</div></div>
+        <div class="sp-card"><div class="sp-swatch" style="width: 32px;"></div><div class="sp-name">xl</div><div class="sp-value">32px · var(--sp-xl)</div></div>
+        <div class="sp-card"><div class="sp-swatch" style="width: 48px;"></div><div class="sp-name">2xl</div><div class="sp-value">48px · var(--sp-2xl)</div></div>
+      </div>
+    </section>
+
+    <!-- 6. RADIUS -->
+    <section class="page block-section" id="radius">
+      <h2>Bordes y radios</h2>
+      <p class="muted">design-system.css · 5 niveles</p>
+      <div class="r-grid">
+        <div class="r-card"><div class="r-swatch" style="border-radius: 2px;"></div><div class="r-name">xs</div><div class="r-value">2px · entradas sutiles</div></div>
+        <div class="r-card"><div class="r-swatch" style="border-radius: 4px;"></div><div class="r-name">sm</div><div class="r-value">4px · inputs</div></div>
+        <div class="r-card"><div class="r-swatch" style="border-radius: 8px;"></div><div class="r-name">md</div><div class="r-value">8px · botones, cards</div></div>
+        <div class="r-card"><div class="r-swatch" style="border-radius: 12px;"></div><div class="r-name">lg</div><div class="r-value">12px · modales, paneles</div></div>
+        <div class="r-card"><div class="r-swatch" style="border-radius: 999px;"></div><div class="r-name">full</div><div class="r-value">999px · píldoras, avatares</div></div>
+      </div>
+    </section>
+
+    <!-- 7. BUTTONS -->
+    <section class="page block-section" id="buttons">
+      <h2>Botones</h2>
+      <p class="muted">design-system.css · min 44×44 (accesibilidad móvil)</p>
+
+      <article class="component">
+        <div class="component-header">
+          <h3>Primary (.btn.btn-primary)</h3>
+          <div class="meta">CTA principal · fondo rosa · texto blanco · radio 8px</div>
+        </div>
+        <div class="component-preview">
+          <div class="btn-row">
+            <a class="btn btn-primary" href="#">♥ Únete a la comunidad</a>
+            <a class="btn btn-primary btn-sm" href="#">♥ Únete</a>
+            <a class="btn btn-primary btn-lg" href="#">Descubre tu camino →</a>
+          </div>
+        </div>
+        <pre class="component-code"><span class="k">&lt;a</span> <span class="a">class</span>=<span class="s">"btn btn-primary"</span> <span class="a">href</span>=<span class="s">"#"</span><span class="k">&gt;</span>♥ Únete a la comunidad<span class="k">&lt;/a&gt;</span></pre>
+        <div class="component-specs"><strong>Specs:</strong> background <code>var(--brand-primary)</code> · hover <code>var(--brand-hover)</code> (−10%) · focus ring 3px · radius 8px · min-height 44px.</div>
+      </article>
+
+      <article class="component">
+        <div class="component-header">
+          <h3>Secondary (.btn.btn-secondary)</h3>
+          <div class="meta">Alternativo · borde rosa · texto rosa · fondo transparente</div>
+        </div>
+        <div class="component-preview">
+          <div class="btn-row">
+            <a class="btn btn-secondary" href="#">Hazme otro quiz</a>
+            <a class="btn btn-secondary btn-sm" href="#">Ver roadmaps</a>
+          </div>
+        </div>
+        <pre class="component-code"><span class="k">&lt;a</span> <span class="a">class</span>=<span class="s">"btn btn-secondary"</span> <span class="a">href</span>=<span class="s">"#"</span><span class="k">&gt;</span>Hazme otro quiz<span class="k">&lt;/a&gt;</span></pre>
+      </article>
+
+      <article class="component">
+        <div class="component-header">
+          <h3>Ghost (.btn.btn-ghost)</h3>
+          <div class="meta">Sin borde · hover con fondo pink-lightest</div>
+        </div>
+        <div class="component-preview">
+          <div class="btn-row">
+            <a class="btn btn-ghost" href="#">Saltar</a>
+            <a class="btn btn-ghost btn-sm" href="#">+ Añadir</a>
+          </div>
+        </div>
+        <pre class="component-code"><span class="k">&lt;a</span> <span class="a">class</span>=<span class="s">"btn btn-ghost"</span><span class="k">&gt;</span>Saltar<span class="k">&lt;/a&gt;</span></pre>
+      </article>
+
+      <article class="component">
+        <div class="component-header">
+          <h3>Dark (.btn.btn-dark)</h3>
+          <div class="meta">CTA fuerte · fondo negro #1A1A1A · texto blanco</div>
+        </div>
+        <div class="component-preview">
+          <div class="btn-row">
+            <a class="btn btn-dark" href="#">Comenzar ahora</a>
+            <a class="btn btn-dark btn-sm" href="#">GitHub ↗</a>
+          </div>
+        </div>
+        <pre class="component-code"><span class="k">&lt;a</span> <span class="a">class</span>=<span class="s">"btn btn-dark"</span><span class="k">&gt;</span>Comenzar ahora<span class="k">&lt;/a&gt;</span></pre>
+      </article>
+
+      <article class="component">
+        <div class="component-header">
+          <h3>Success (.btn.btn-success)</h3>
+          <div class="meta">Confirmación · fondo verde #34D399 · check automático</div>
+        </div>
+        <div class="component-preview">
+          <div class="btn-row">
+            <a class="btn btn-success" href="#">Guardado</a>
+            <a class="btn btn-success btn-sm" href="#">Enviado</a>
+          </div>
+        </div>
+        <pre class="component-code"><span class="k">&lt;a</span> <span class="a">class</span>=<span class="s">"btn btn-success"</span><span class="k">&gt;</span>Guardado<span class="k">&lt;/a&gt;</span></pre>
+      </article>
+
+      <article class="component">
+        <div class="component-header">
+          <h3>Pill con icono — pareja Agenda + Únete (.btn-pill, .btn-raised)</h3>
+          <div class="meta">CTA pareado típico del header · dark pill + primary pill con sombra 3D</div>
+        </div>
+        <div class="component-preview">
+          <div class="btn-row">
+            <a class="btn btn-dark btn-pill" href="#">
+              <span class="btn-icon">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>
+              </span>
+              Agenda
+            </a>
+            <a class="btn btn-primary btn-pill btn-raised" href="#">
+              <span class="btn-icon" aria-hidden="true">♥</span>
+              Únete
+            </a>
+          </div>
+          <p class="caption" style="margin-top: var(--sp-md);">Combinables: cualquier color + <code>.btn-pill</code> = pill · <code>.btn-primary.btn-raised</code> = sombra 3D rosa oscura.</p>
+        </div>
+        <pre class="component-code"><span class="k">&lt;a</span> <span class="a">class</span>=<span class="s">"btn btn-dark btn-pill"</span> <span class="a">href</span>=<span class="s">"#"</span><span class="k">&gt;</span>
+  <span class="k">&lt;span</span> <span class="a">class</span>=<span class="s">"btn-icon"</span><span class="k">&gt;&lt;svg</span> <span class="a">viewBox</span>=<span class="s">"0 0 24 24"</span><span class="k">&gt;</span>...<span class="k">&lt;/svg&gt;&lt;/span&gt;</span>
+  Agenda
+<span class="k">&lt;/a&gt;</span>
+
+<span class="k">&lt;a</span> <span class="a">class</span>=<span class="s">"btn btn-primary btn-pill btn-raised"</span> <span class="a">href</span>=<span class="s">"#"</span><span class="k">&gt;</span>
+  <span class="k">&lt;span</span> <span class="a">class</span>=<span class="s">"btn-icon"</span><span class="k">&gt;</span>♥<span class="k">&lt;/span&gt;</span>
+  Únete
+<span class="k">&lt;/a&gt;</span></pre>
+        <div class="component-specs">
+          <strong>Specs:</strong> <code>.btn-pill</code> = <code>border-radius: var(--r-full)</code> · padding horizontal 22px ·
+          <code>.btn-raised</code> = <code>box-shadow: 0 3px 0 rgba(0,0,0,.18)</code> · hover sube 1px y aumenta sombra ·
+          active hunde 2px · en primary la sombra se vuelve <code>var(--brand-hover)</code> para quedar rosa oscuro.
+        </div>
+      </article>
+
+      <article class="component">
+        <div class="component-header">
+          <h3>Pill en otras combinaciones</h3>
+          <div class="meta">El modifier .btn-pill se combina con cualquier variante de color</div>
+        </div>
+        <div class="component-preview">
+          <div class="btn-row">
+            <a class="btn btn-secondary btn-pill" href="#">
+              <span class="btn-icon" aria-hidden="true">✦</span>
+              Secundario pill
+            </a>
+            <a class="btn btn-pill" href="#">
+              <span class="btn-icon" aria-hidden="true">⟶</span>
+              Base pill
+            </a>
+            <a class="btn btn-ghost btn-pill" href="#">
+              <span class="btn-icon" aria-hidden="true">+</span>
+              Ghost pill
+            </a>
+            <a class="btn btn-success btn-pill" href="#">Enviado</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="component">
+        <div class="component-header">
+          <h3>Estados: hover, focus, disabled</h3>
+          <div class="meta">Transiciones consistentes para todos los .btn</div>
+        </div>
+        <div class="component-preview">
+          <div class="btn-row">
+            <a class="btn btn-primary" href="#">Normal</a>
+            <a class="btn btn-primary" href="#" style="background: var(--brand-hover); border-color: var(--brand-hover);">Hover</a>
+            <a class="btn btn-primary" href="#" style="box-shadow: var(--shadow-focus);">Focus</a>
+            <button class="btn btn-primary" disabled>Disabled</button>
+          </div>
+        </div>
+        <div class="component-specs"><strong>Hover:</strong> cambio a pink-light o oscurecer 5% · <strong>Activo:</strong> oscurecer 10% · <strong>Disabled:</strong> 50% opacidad · <strong>Focus:</strong> ring 3px rosa.</div>
+      </article>
+
+      <article class="component">
+        <div class="component-header">
+          <h3>Links y text-button (.link, .text-btn)</h3>
+          <div class="meta">Enlaces inline y acciones ligeras</div>
+        </div>
+        <div class="component-preview">
+          <p style="margin: 0 0 var(--sp-sm);">Esto es un párrafo con un <a class="link" href="#">enlace estilizado</a> dentro.</p>
+          <button class="text-btn" type="button">// view_all →</button>
+        </div>
+        <pre class="component-code"><span class="k">&lt;a</span> <span class="a">class</span>=<span class="s">"link"</span> <span class="a">href</span>=<span class="s">"#"</span><span class="k">&gt;</span>enlace estilizado<span class="k">&lt;/a&gt;</span>
+<span class="k">&lt;button</span> <span class="a">class</span>=<span class="s">"text-btn"</span><span class="k">&gt;</span>// view_all →<span class="k">&lt;/button&gt;</span></pre>
+      </article>
+
+      <article class="component">
+        <div class="component-header">
+          <h3>Icon button (.icon-btn)</h3>
+          <div class="meta">Toggle de tema, menú y cerrar · 44×44 cuadrado</div>
+        </div>
+        <div class="component-preview">
+          <div class="btn-row">
+            <button class="icon-btn" aria-label="Tema"><svg class="i-moon" viewBox="0 0 24 24"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg></button>
+            <button class="icon-btn" aria-label="Menú"><svg viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+            <button class="icon-btn" aria-label="Cerrar"><svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <!-- 8. BADGES / CHIPS -->
+    <section class="page block-section" id="badges">
+      <h2>Badges &amp; chips</h2>
+      <p class="muted">design-system.css · .badge, .chip, .pill</p>
+
+      <article class="component">
+        <div class="component-header">
+          <h3>Badge (.badge + variantes)</h3>
+          <div class="meta">Píldoras pequeñas para skills, tecnologías o estados</div>
+        </div>
+        <div class="component-preview">
+          <div class="btn-row">
+            <span class="badge">default</span>
+            <span class="badge badge-pink">PINK</span>
+            <span class="badge badge-purple">PURPLE</span>
+            <span class="badge badge-dark">DARK</span>
+            <span class="badge badge-outline">OUTLINE</span>
+            <span class="badge badge-success">✓ SUCCESS</span>
+          </div>
+        </div>
+        <pre class="component-code"><span class="k">&lt;span</span> <span class="a">class</span>=<span class="s">"badge badge-pink"</span><span class="k">&gt;</span>PINK<span class="k">&lt;/span&gt;</span>
+<span class="k">&lt;span</span> <span class="a">class</span>=<span class="s">"badge badge-purple"</span><span class="k">&gt;</span>PURPLE<span class="k">&lt;/span&gt;</span>
+<span class="k">&lt;span</span> <span class="a">class</span>=<span class="s">"badge badge-success"</span><span class="k">&gt;</span>✓ SUCCESS<span class="k">&lt;/span&gt;</span></pre>
+      </article>
+
+      <article class="component">
+        <div class="component-header">
+          <h3>Chip interactivo (.chip, .chip.active)</h3>
+          <div class="meta">Selección de rol o filtros</div>
+        </div>
+        <div class="component-preview">
+          <div class="btn-row">
+            <button class="chip active" type="button">Data Analyst</button>
+            <button class="chip" type="button">Data Scientist</button>
+            <button class="chip" type="button">Data Engineer</button>
+          </div>
+        </div>
+        <pre class="component-code"><span class="k">&lt;button</span> <span class="a">class</span>=<span class="s">"chip active"</span><span class="k">&gt;</span>Data Analyst<span class="k">&lt;/button&gt;</span></pre>
+      </article>
+
+      <article class="component">
+        <div class="component-header">
+          <h3>Status pill (.pill)</h3>
+          <div class="meta">Píldora oscura con dot verde para estados "en vivo"</div>
+        </div>
+        <div class="component-preview">
+          <div class="btn-row">
+            <span class="pill">comunidad abierta</span>
+            <span class="pill">she_data_app.waitlist</span>
+          </div>
+        </div>
+        <pre class="component-code"><span class="k">&lt;span</span> <span class="a">class</span>=<span class="s">"pill"</span><span class="k">&gt;</span>comunidad abierta<span class="k">&lt;/span&gt;</span></pre>
+        <div class="component-specs"><strong>Specs:</strong> background <code>var(--brand-dark)</code> · dot <code>var(--success)</code> con halo blur 3px.</div>
+      </article>
+    </section>
+
+    <!-- 9. TOP BAR -->
+    <section class="page block-section" id="topbar">
+      <h2>Top bar</h2>
+      <p class="muted">design-system.css · .topbar + .mainnav + .lang-switch</p>
+      <article class="component">
+        <div class="component-header">
+          <h3>Top bar completo (.topbar)</h3>
+          <div class="meta">Logo + nav + lang + theme + CTA · sticky</div>
+        </div>
+        <div class="component-preview" style="padding: 0;">
+          <div class="topbar" style="position: relative; top: 0;">
+            <a class="logo" href="#">
+              <span class="logo-mark"><img src="assets/logo.png" alt=""></span>
+              <span class="shedata">SHEDATA</span><span class="dot">.</span><span class="tech">TECH</span>
+            </a>
+            <nav class="mainnav">
+              <ul>
+                <li><a href="#" class="active">Inicio</a></li>
+                <li><a href="#">Roadmaps</a></li>
+                <li><a href="#">Recursos</a></li>
+                <li><a href="#">Comunidad</a></li>
+                <li><a href="#">Foro</a></li>
+              </ul>
+            </nav>
+            <div class="topbar-actions">
+              <div class="lang-switch"><button aria-pressed="true">ES</button><button aria-pressed="false">EN</button></div>
+              <a class="btn btn-dark btn-pill btn-sm" href="#">
+                <span class="btn-icon"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg></span>
+                Agenda
+              </a>
+              <a class="btn btn-primary btn-pill btn-raised btn-sm" href="#">
+                <span class="btn-icon">♥</span> Únete
+              </a>
+            </div>
+          </div>
+        </div>
+        <pre class="component-code"><span class="k">&lt;header</span> <span class="a">class</span>=<span class="s">"topbar"</span><span class="k">&gt;</span>
+  <span class="k">&lt;a</span> <span class="a">class</span>=<span class="s">"logo"</span><span class="k">&gt;</span>...<span class="k">&lt;/a&gt;</span>
+  <span class="k">&lt;nav</span> <span class="a">class</span>=<span class="s">"mainnav"</span><span class="k">&gt;</span>...<span class="k">&lt;/nav&gt;</span>
+  <span class="k">&lt;div</span> <span class="a">class</span>=<span class="s">"topbar-actions"</span><span class="k">&gt;</span>...<span class="k">&lt;/div&gt;</span>
+<span class="k">&lt;/header&gt;</span></pre>
+      </article>
+    </section>
+
+    <!-- 10. HERO -->
+    <section class="page block-section" id="hero">
+      <h2>Hero section</h2>
+      <p class="muted">design-system.css · .hero-title + .hero-script + .hero-tagline</p>
+      <article class="component">
+        <div class="component-header">
+          <h3>Hero (.hero-title + .hl-pink + .hero-script + .hero-tagline)</h3>
+          <div class="meta">Título Space Grotesk · script Caveat rosa · tagline body-large</div>
+        </div>
+        <div class="component-preview">
+          <span class="section-eyebrow">◆ she_data_welcome</span>
+          <h1 class="hero-title">
+            No naciste sabiendo <span class="hl-bracket">Python()</span>.
+          </h1>
+          <p class="hero-script">Nosotras tampoco.</p>
+          <p class="hero-tagline">
+            SHE DATA es la comunidad hispanohablante donde las mujeres entran a los datos sin tener que empezar solas.
+          </p>
+          <div class="btn-row">
+            <a class="btn btn-primary" href="#">♥ Únete a la comunidad</a>
+            <a class="btn btn-secondary" href="#">Ver agenda</a>
+          </div>
+        </div>
+        <pre class="component-code"><span class="k">&lt;h1</span> <span class="a">class</span>=<span class="s">"hero-title"</span><span class="k">&gt;</span>
+  No naciste sabiendo <span class="k">&lt;span</span> <span class="a">class</span>=<span class="s">"hl-bracket"</span><span class="k">&gt;</span>Python()<span class="k">&lt;/span&gt;</span>.
+<span class="k">&lt;/h1&gt;</span>
+<span class="k">&lt;p</span> <span class="a">class</span>=<span class="s">"hero-script"</span><span class="k">&gt;</span>Nosotras tampoco.<span class="k">&lt;/p&gt;</span>
+<span class="k">&lt;p</span> <span class="a">class</span>=<span class="s">"hero-tagline"</span><span class="k">&gt;</span>SHE DATA es la comunidad...<span class="k">&lt;/p&gt;</span></pre>
+        <div class="component-specs"><strong>Specs:</strong> h1 clamp(2.2rem, 5vw, 3.4rem) · <code>.hl-bracket</code> Courier New rosa · <code>.hero-script</code> Caveat itálica · <code>.hero-tagline</code> body-lg 18px.</div>
+      </article>
+    </section>
+
+    <!-- 11. TESTIMONIALS -->
+    <section class="page block-section" id="testimonials">
+      <h2>Testimonios</h2>
+      <p class="muted">design-system.css · .testimonial, .testimonial-dark · voz principal de la comunidad</p>
+
+      <article class="component">
+        <div class="component-header">
+          <h3>Testimonio claro (.testimonial)</h3>
+          <div class="meta">Cita en Caveat itálica rosa · atribución pequeña debajo</div>
+        </div>
+        <div class="component-preview" style="padding: var(--sp-xl); display: flex; justify-content: center;">
+          <figure class="testimonial" style="max-width: 360px;">
+            <blockquote>"siento que encontré mi comunidad"</blockquote>
+            <figcaption><strong>Aylin Ortiz</strong> · integrante</figcaption>
+          </figure>
+        </div>
+        <pre class="component-code"><span class="k">&lt;figure</span> <span class="a">class</span>=<span class="s">"testimonial"</span><span class="k">&gt;</span>
+  <span class="k">&lt;blockquote&gt;</span>"siento que encontré mi comunidad"<span class="k">&lt;/blockquote&gt;</span>
+  <span class="k">&lt;figcaption&gt;&lt;strong&gt;</span>Aylin Ortiz<span class="k">&lt;/strong&gt;</span> · integrante<span class="k">&lt;/figcaption&gt;</span>
+<span class="k">&lt;/figure&gt;</span></pre>
+        <div class="component-specs"><strong>Specs:</strong> cita en <code>var(--f-hand)</code> itálica <code>var(--brand-primary)</code> 24px · atribución caption 12px · borde pink-light · padding space-lg.</div>
+      </article>
+
+      <article class="component">
+        <div class="component-header">
+          <h3>Testimonio chat (.testimonial-dark)</h3>
+          <div class="meta">Mensaje tipo chat de la comunidad · fondo negro · meta mono</div>
+        </div>
+        <div class="component-preview" style="padding: var(--sp-xl); display: flex; justify-content: center;">
+          <div class="testimonial testimonial-dark" style="max-width: 360px;">
+            <p class="meta"># mensaje · 02:48</p>
+            <blockquote>"estoy amando con locura todo lo que pasa con la comunidad ♥"</blockquote>
+            <figcaption>— Janaín Flores</figcaption>
+          </div>
+        </div>
+        <pre class="component-code"><span class="k">&lt;div</span> <span class="a">class</span>=<span class="s">"testimonial testimonial-dark"</span><span class="k">&gt;</span>
+  <span class="k">&lt;p</span> <span class="a">class</span>=<span class="s">"meta"</span><span class="k">&gt;</span># mensaje · 02:48<span class="k">&lt;/p&gt;</span>
+  <span class="k">&lt;blockquote&gt;</span>"estoy amando con locura..."<span class="k">&lt;/blockquote&gt;</span>
+  <span class="k">&lt;figcaption&gt;</span>— Janaín Flores<span class="k">&lt;/figcaption&gt;</span>
+<span class="k">&lt;/div&gt;</span></pre>
+      </article>
+
+      <article class="component">
+        <div class="component-header">
+          <h3>Grid de 3 testimonios</h3>
+          <div class="meta">Mezcla claro y oscuro · variedad visual</div>
+        </div>
+        <div class="component-preview">
+          <div class="grid grid-3">
+            <figure class="testimonial">
+              <blockquote>"no sabía que lo necesitaba hasta que entré"</blockquote>
+              <figcaption><strong>Jerónima</strong> · integrante</figcaption>
+            </figure>
+            <div class="testimonial testimonial-dark">
+              <p class="meta"># chat · 02:48</p>
+              <blockquote>"sentí que encontré mi gente"</blockquote>
+              <figcaption>— Daniela</figcaption>
+            </div>
+            <figure class="testimonial">
+              <blockquote>"ahora resuelvo mis dudas con otras mujeres"</blockquote>
+              <figcaption><strong>Isabela V.</strong> · integrante</figcaption>
+            </figure>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <!-- 11b. VALUES CHIPS -->
+    <section class="page block-section" id="values">
+      <h2>Valores (chips)</h2>
+      <p class="muted">componentes.css · .values-eyebrow + .values-list + .value-chip</p>
+      <article class="component">
+        <div class="component-header">
+          <h3>Value chips (.value-chip)</h3>
+          <div class="meta">Lista horizontal con eyebrow mono tipo comentario de código + chips icon + label</div>
+        </div>
+        <div class="component-preview" style="text-align: center;">
+          <p class="values-eyebrow"><span class="hash">#</span> nuestra misión: que ninguna mujer aprenda datos sola. valores.list() →</p>
+          <div class="values-list">
+            <span class="value-chip">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg>
+              respeto
+            </span>
+            <span class="value-chip">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+              honestidad
+            </span>
+            <span class="value-chip">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>
+              disciplina
+            </span>
+            <span class="value-chip">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 21a8 8 0 0 0-16 0"/><circle cx="10" cy="8" r="5"/><path d="M22 20c0-3.37-2-6.5-4-8a5 5 0 0 0-.45-8.3"/></svg>
+              trabajo_en_equipo
+            </span>
+            <span class="value-chip">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+              amor
+            </span>
+          </div>
+        </div>
+        <pre class="component-code"><span class="k">&lt;p</span> <span class="a">class</span>=<span class="s">"values-eyebrow"</span><span class="k">&gt;</span>
+  <span class="k">&lt;span</span> <span class="a">class</span>=<span class="s">"hash"</span><span class="k">&gt;</span>#<span class="k">&lt;/span&gt;</span> nuestra misión: ... valores.list() →
+<span class="k">&lt;/p&gt;</span>
+<span class="k">&lt;div</span> <span class="a">class</span>=<span class="s">"values-list"</span><span class="k">&gt;</span>
+  <span class="k">&lt;span</span> <span class="a">class</span>=<span class="s">"value-chip"</span><span class="k">&gt;</span>[svg] respeto<span class="k">&lt;/span&gt;</span>
+  <span class="k">&lt;span</span> <span class="a">class</span>=<span class="s">"value-chip"</span><span class="k">&gt;</span>[svg] honestidad<span class="k">&lt;/span&gt;</span>
+  ...
+<span class="k">&lt;/div&gt;</span></pre>
+      </article>
+    </section>
+
+    <!-- 11c. CURIOSIDADES SCROLLER -->
+    <section class="page block-section" id="curiosidades">
+      <h2>Curiosidades (scroller)</h2>
+      <p class="muted">componentes.css · .scroller + .scroller-track + .scroller-nav + .curio-card + .in-eyebrow</p>
+      <article class="component">
+        <div class="component-header">
+          <h3>Scroller horizontal con cards de curiosidad</h3>
+          <div class="meta">Eyebrow notebook <code>In [n]:</code> + título + scroll-snap horizontal con nav arrows y fades laterales</div>
+        </div>
+        <div class="component-preview">
+          <div style="text-align: center; margin-bottom: var(--sp-md);">
+            <div class="in-eyebrow">In [5]:</div>
+            <h2 style="margin: 0 0 8px;">Data is everywhere.</h2>
+            <p class="muted" style="margin: 0 auto; max-width: 36em;">Detrás de las cosas cotidianas hay más datos de los que imaginamos.</p>
+          </div>
+          <div class="scroller">
+            <button class="scroller-nav prev" aria-label="Anterior">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+            </button>
+            <button class="scroller-nav next" aria-label="Siguiente">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+            </button>
+            <div class="scroller-track">
+              <button class="curio-card">
+                <div class="curio-card-head">
+                  <span class="curio-card-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="18" r="4"/><path d="M12 18V2l7 4"/></svg>
+                  </span>
+                  <span class="curio-card-cat">Algoritmos &amp; Audio</span>
+                </div>
+                <h3>¿Cómo Spotify sabe qué recomendarte?</h3>
+                <p>Descubre cómo los algoritmos de filtrado colaborativo y procesamiento de audio crean tus recomendaciones semanales.</p>
+              </button>
+              <button class="curio-card">
+                <div class="curio-card-head">
+                  <span class="curio-card-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-.6 0-1.1.4-1.4.9l-1.4 2.9A3.7 3.7 0 0 0 2 12v4c0 .6.4 1 1 1h2"/><circle cx="7" cy="17" r="2"/><path d="M9 17h6"/><circle cx="17" cy="17" r="2"/></svg>
+                  </span>
+                  <span class="curio-card-cat">Precios Dinámicos</span>
+                </div>
+                <h3>¿Cómo funcionan las tarifas de Uber y Didi?</h3>
+                <p>Aprende cómo los algoritmos de oferta y demanda ajustan el precio del viaje en tiempo real según la zona y hora.</p>
+              </button>
+              <button class="curio-card">
+                <div class="curio-card-head">
+                  <span class="curio-card-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="21" r="1"/><circle cx="19" cy="21" r="1"/><path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"/></svg>
+                  </span>
+                  <span class="curio-card-cat">Recomendaciones</span>
+                </div>
+                <h3>¿Cómo Amazon decide qué mostrarte?</h3>
+                <p>Explora los motores de recomendación y el análisis de canasta de mercado que predicen tus siguientes compras.</p>
+              </button>
+              <button class="curio-card">
+                <div class="curio-card-head">
+                  <span class="curio-card-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 2v2M5 2v2M5 3H4a2 2 0 0 0-2 2v4a6 6 0 0 0 12 0V5a2 2 0 0 0-2-2h-1M8 15a6 6 0 0 0 12 0v-3"/><circle cx="20" cy="10" r="2"/></svg>
+                  </span>
+                  <span class="curio-card-cat">Salud Digital</span>
+                </div>
+                <h3>¿Cómo se utilizan los datos en medicina?</h3>
+                <p>Desde la secuenciación genómica hasta el diagnóstico de radiografías con modelos de Visión por Computadora.</p>
+              </button>
+              <button class="curio-card">
+                <div class="curio-card-head">
+                  <span class="curio-card-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 20h10M10 20c5.5-2.5.8-6.4 3-10"/><path d="M9.5 9.4c1.1.8 1.8 2.2 2.3 3.7-2 .4-3.5.4-4.8-.3-1.2-.6-2.3-1.9-3-4.2 2.8-.5 4.4 0 5.5.8z"/><path d="M14.1 6a7 7 0 0 0-1.1 4c1.9-.1 3.3-.6 4.3-1.4 1-1 1.6-2.3 1.7-4.6-2.7.1-4 1-4.9 2z"/></svg>
+                  </span>
+                  <span class="curio-card-cat">Agritech</span>
+                </div>
+                <h3>¿Cómo se utilizan los datos en agricultura?</h3>
+                <p>Agricultura de precisión: cómo sensores de suelo e imágenes satelitales optimizan el riego y la producción alimentaria.</p>
+              </button>
+            </div>
+          </div>
+        </div>
+        <pre class="component-code"><span class="k">&lt;div</span> <span class="a">class</span>=<span class="s">"scroller"</span><span class="k">&gt;</span>
+  <span class="k">&lt;button</span> <span class="a">class</span>=<span class="s">"scroller-nav prev"</span><span class="k">&gt;</span>[svg]<span class="k">&lt;/button&gt;</span>
+  <span class="k">&lt;button</span> <span class="a">class</span>=<span class="s">"scroller-nav next"</span><span class="k">&gt;</span>[svg]<span class="k">&lt;/button&gt;</span>
+  <span class="k">&lt;div</span> <span class="a">class</span>=<span class="s">"scroller-track"</span><span class="k">&gt;</span>
+    <span class="k">&lt;button</span> <span class="a">class</span>=<span class="s">"curio-card"</span><span class="k">&gt;</span>
+      <span class="k">&lt;div</span> <span class="a">class</span>=<span class="s">"curio-card-head"</span><span class="k">&gt;</span>
+        <span class="k">&lt;span</span> <span class="a">class</span>=<span class="s">"curio-card-icon"</span><span class="k">&gt;</span>[svg]<span class="k">&lt;/span&gt;</span>
+        <span class="k">&lt;span</span> <span class="a">class</span>=<span class="s">"curio-card-cat"</span><span class="k">&gt;</span>Algoritmos<span class="k">&lt;/span&gt;</span>
+      <span class="k">&lt;/div&gt;</span>
+      <span class="k">&lt;h3&gt;</span>¿Cómo Spotify...<span class="k">&lt;/h3&gt;</span>
+      <span class="k">&lt;p&gt;</span>Descubre cómo...<span class="k">&lt;/p&gt;</span>
+    <span class="k">&lt;/button&gt;</span>
+  <span class="k">&lt;/div&gt;</span>
+<span class="k">&lt;/div&gt;</span></pre>
+        <div class="component-specs"><strong>Specs:</strong> <code>.scroller-track</code> overflow-x auto con <code>scroll-snap-type: x mandatory</code>, scrollbar oculto · <code>.scroller::before/::after</code> gradient fades laterales · <code>.curio-card</code> width 288px fijo, hover <code>translateY(-4px)</code>.</div>
+      </article>
+    </section>
+
+    <!-- 12. CODE BOX / STATS -->
+    <section class="page block-section" id="code">
+      <h2>Code box &amp; stats</h2>
+      <p class="muted">design-system.css · .code-box + .stats-row + .stat</p>
+
+      <article class="component">
+        <div class="component-header">
+          <h3>Code box (.code-box)</h3>
+          <div class="meta">Fondo #2D2D3A · monospace blanco · acentos rosa</div>
+        </div>
+        <div class="component-preview">
+          <div class="code-box">
+            <div class="code-box-head">she_data.community · ~ · zsh</div>
+            <p style="margin: 4px 0;"><span class="cmt"># en el chat de la comunidad</span></p>
+            <p style="margin: 4px 0;"><span class="k">&gt;</span> estoy aprendiendo con lxs <span class="str">"mujeres de la comunidad"</span></p>
+            <p style="margin: 4px 0;"><span class="k">&gt;</span> sentí que encontré mi <span class="str">"gente"</span></p>
+            <p style="margin: 4px 0;"><span class="k">&gt;</span> she_data.print(<span class="str">"gracias"</span>)</p>
+          </div>
+        </div>
+        <pre class="component-code"><span class="k">&lt;div</span> <span class="a">class</span>=<span class="s">"code-box"</span><span class="k">&gt;</span>
+  <span class="k">&lt;div</span> <span class="a">class</span>=<span class="s">"code-box-head"</span><span class="k">&gt;</span>she_data.community · ~ · zsh<span class="k">&lt;/div&gt;</span>
+  <span class="k">&lt;p&gt;&lt;span</span> <span class="a">class</span>=<span class="s">"k"</span><span class="k">&gt;</span>&gt;<span class="k">&lt;/span&gt;</span> estoy aprendiendo...<span class="k">&lt;/p&gt;</span>
+<span class="k">&lt;/div&gt;</span></pre>
+      </article>
+
+      <article class="component">
+        <div class="component-header">
+          <h3>Stats row (.code-box + .stats-row + .stat)</h3>
+          <div class="meta">Métricas destacadas estilo "comunidad.describe()"</div>
+        </div>
+        <div class="component-preview">
+          <div class="code-box">
+            <p style="margin: 0 0 var(--sp-sm);"><span class="k">&gt;&gt;&gt;</span> comunidad.describe()</p>
+            <dl class="stats-row">
+              <div class="stat"><dt>400+</dt><dd>integrantes</dd></div>
+              <div class="stat"><dt>100%</dt><dd>recursos free</dd></div>
+              <div class="stat"><dt>24/7</dt><dd>colaborativa</dd></div>
+            </dl>
+          </div>
+        </div>
+        <pre class="component-code"><span class="k">&lt;div</span> <span class="a">class</span>=<span class="s">"code-box"</span><span class="k">&gt;</span>
+  <span class="k">&lt;p&gt;&lt;span</span> <span class="a">class</span>=<span class="s">"k"</span><span class="k">&gt;</span>&gt;&gt;&gt;<span class="k">&lt;/span&gt;</span> comunidad.describe()<span class="k">&lt;/p&gt;</span>
+  <span class="k">&lt;dl</span> <span class="a">class</span>=<span class="s">"stats-row"</span><span class="k">&gt;</span>
+    <span class="k">&lt;div</span> <span class="a">class</span>=<span class="s">"stat"</span><span class="k">&gt;&lt;dt&gt;</span>400+<span class="k">&lt;/dt&gt;&lt;dd&gt;</span>integrantes<span class="k">&lt;/dd&gt;&lt;/div&gt;</span>
+  <span class="k">&lt;/dl&gt;</span>
+<span class="k">&lt;/div&gt;</span></pre>
+      </article>
+    </section>
+
+    <!-- 13. CARDS -->
+    <section class="page block-section" id="cards">
+      <h2>Cards</h2>
+      <p class="muted">design-system.css · .card, .route-card, .profile-card, .kicker-card, .topic-card</p>
+
+      <article class="component">
+        <div class="component-header">
+          <h3>Card base (.card)</h3>
+          <div class="meta">radio 8px · sombra suave · hover pink-lightest · padding md</div>
+        </div>
+        <div class="component-preview">
+          <div class="grid grid-3">
+            <div class="card">
+              <span class="card-eyebrow"><span class="ico">◆</span> notas</span>
+              <h3>Card por defecto</h3>
+              <p>Para contenido genérico — hover la torna rosada.</p>
+            </div>
+            <div class="card">
+              <span class="card-eyebrow"><span class="ico">♥</span> comunidad</span>
+              <h3>Con eyebrow mono</h3>
+              <p>Pequeña píldora con icono encima del título.</p>
+            </div>
+            <div class="card">
+              <span class="card-eyebrow"><span class="ico">✦</span> brujas</span>
+              <h3>Variante temática</h3>
+              <p>Cambia solo el icono para marcar categoría.</p>
+            </div>
+          </div>
+        </div>
+        <pre class="component-code"><span class="k">&lt;div</span> <span class="a">class</span>=<span class="s">"card"</span><span class="k">&gt;</span>
+  <span class="k">&lt;span</span> <span class="a">class</span>=<span class="s">"card-eyebrow"</span><span class="k">&gt;&lt;span</span> <span class="a">class</span>=<span class="s">"ico"</span><span class="k">&gt;</span>◆<span class="k">&lt;/span&gt;</span> notas<span class="k">&lt;/span&gt;</span>
+  <span class="k">&lt;h3&gt;</span>Card por defecto<span class="k">&lt;/h3&gt;</span>
+  <span class="k">&lt;p&gt;</span>Para contenido genérico...<span class="k">&lt;/p&gt;</span>
+<span class="k">&lt;/div&gt;</span></pre>
+      </article>
+
+      <article class="component">
+        <div class="component-header">
+          <h3>Route card (.route-card) — ruta de aprendizaje de un rol</h3>
+          <div class="meta">Layout 2-col: info del rol (icon + título + duración + descripción + stats + CTA) a la izquierda · preview del primer video de la ruta a la derecha</div>
+        </div>
+        <div class="component-preview">
+          <div class="route-card">
+            <div class="route-card-main">
+              <div class="route-card-head">
+                <span class="route-card-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v16a2 2 0 0 0 2 2h16"/><path d="m19 9-5 5-4-4-3 3"/></svg>
+                </span>
+                <div>
+                  <h3>Data Analyst</h3>
+                  <span class="route-card-duration">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                    3-6 meses
+                  </span>
+                </div>
+              </div>
+              <p class="route-card-desc">Si te gusta analizar información, encontrar patrones y convertir datos en decisiones.</p>
+              <div class="route-card-stats">
+                <div class="route-card-stat">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
+                  <span>6 fases</span>
+                </div>
+                <div class="route-card-stat purple">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg>
+                  <span>24 videos</span>
+                </div>
+              </div>
+              <a class="route-card-cta" href="#">
+                <span>Empezar el roadmap guiado</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+              </a>
+            </div>
+            <aside class="route-card-aside">
+              <p class="route-aside-eyebrow">empiezas por aquí ↓</p>
+              <div class="first-lesson">
+                <div class="first-lesson-thumb">
+                  <img src="https://img.youtube.com/vi/Vl-dcTBswzg/mqdefault.jpg" alt="Qué es una celda en Excel">
+                  <div class="first-lesson-play">
+                    <span>
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg>
+                    </span>
+                  </div>
+                </div>
+                <div class="first-lesson-body">
+                  <p class="first-lesson-title">Qué es una celda, una fila y una columna</p>
+                  <p class="first-lesson-source">Aprender Excel</p>
+                  <span class="first-lesson-device">📲 Celular o tablet</span>
+                </div>
+              </div>
+              <p class="route-aside-phase">Fase 1 de 6: <strong>Excel / Spreadsheets</strong></p>
+            </aside>
+          </div>
+        </div>
+        <pre class="component-code"><span class="k">&lt;div</span> <span class="a">class</span>=<span class="s">"route-card"</span><span class="k">&gt;</span>
+  <span class="k">&lt;div</span> <span class="a">class</span>=<span class="s">"route-card-main"</span><span class="k">&gt;</span>
+    <span class="k">&lt;div</span> <span class="a">class</span>=<span class="s">"route-card-head"</span><span class="k">&gt;</span>
+      <span class="k">&lt;span</span> <span class="a">class</span>=<span class="s">"route-card-icon"</span><span class="k">&gt;</span>[svg]<span class="k">&lt;/span&gt;</span>
+      <span class="k">&lt;div&gt;</span>
+        <span class="k">&lt;h3&gt;</span>Data Analyst<span class="k">&lt;/h3&gt;</span>
+        <span class="k">&lt;span</span> <span class="a">class</span>=<span class="s">"route-card-duration"</span><span class="k">&gt;</span>[svg] 3-6 meses<span class="k">&lt;/span&gt;</span>
+      <span class="k">&lt;/div&gt;</span>
+    <span class="k">&lt;/div&gt;</span>
+    <span class="k">&lt;p</span> <span class="a">class</span>=<span class="s">"route-card-desc"</span><span class="k">&gt;</span>Si te gusta analizar...<span class="k">&lt;/p&gt;</span>
+    <span class="k">&lt;div</span> <span class="a">class</span>=<span class="s">"route-card-stats"</span><span class="k">&gt;</span>
+      <span class="k">&lt;div</span> <span class="a">class</span>=<span class="s">"route-card-stat"</span><span class="k">&gt;</span>[svg] 6 fases<span class="k">&lt;/div&gt;</span>
+      <span class="k">&lt;div</span> <span class="a">class</span>=<span class="s">"route-card-stat purple"</span><span class="k">&gt;</span>[svg] 24 videos<span class="k">&lt;/div&gt;</span>
+    <span class="k">&lt;/div&gt;</span>
+    <span class="k">&lt;a</span> <span class="a">class</span>=<span class="s">"route-card-cta"</span> <span class="a">href</span>=<span class="s">"/roadmap/da"</span><span class="k">&gt;</span>
+      Empezar el roadmap guiado [svg]
+    <span class="k">&lt;/a&gt;</span>
+  <span class="k">&lt;/div&gt;</span>
+  <span class="k">&lt;aside</span> <span class="a">class</span>=<span class="s">"route-card-aside"</span><span class="k">&gt;</span>
+    <span class="k">&lt;p</span> <span class="a">class</span>=<span class="s">"route-aside-eyebrow"</span><span class="k">&gt;</span>empiezas por aquí ↓<span class="k">&lt;/p</span><span class="k">&gt;</span>
+    <span class="k">&lt;div</span> <span class="a">class</span>=<span class="s">"first-lesson"</span><span class="k">&gt;</span>
+      <span class="k">&lt;div</span> <span class="a">class</span>=<span class="s">"first-lesson-thumb"</span><span class="k">&gt;&lt;img.../&gt;</span>
+        <span class="k">&lt;div</span> <span class="a">class</span>=<span class="s">"first-lesson-play"</span><span class="k">&gt;&lt;span&gt;</span>[svg]<span class="k">&lt;/span&gt;&lt;/div&gt;</span>
+      <span class="k">&lt;/div&gt;</span>
+      <span class="k">&lt;div</span> <span class="a">class</span>=<span class="s">"first-lesson-body"</span><span class="k">&gt;</span>
+        <span class="k">&lt;p</span> <span class="a">class</span>=<span class="s">"first-lesson-title"</span><span class="k">&gt;</span>Qué es una celda...<span class="k">&lt;/p</span><span class="k">&gt;</span>
+        <span class="k">&lt;p</span> <span class="a">class</span>=<span class="s">"first-lesson-source"</span><span class="k">&gt;</span>Aprender Excel<span class="k">&lt;/p</span><span class="k">&gt;</span>
+        <span class="k">&lt;span</span> <span class="a">class</span>=<span class="s">"first-lesson-device"</span><span class="k">&gt;</span>📲 Celular o tablet<span class="k">&lt;/span&gt;</span>
+      <span class="k">&lt;/div&gt;</span>
+    <span class="k">&lt;/div&gt;</span>
+    <span class="k">&lt;p</span> <span class="a">class</span>=<span class="s">"route-aside-phase"</span><span class="k">&gt;</span>Fase 1 de 6: <span class="k">&lt;strong&gt;</span>Excel / Spreadsheets<span class="k">&lt;/strong&gt;&lt;/p&gt;</span>
+  <span class="k">&lt;/aside&gt;</span>
+<span class="k">&lt;/div&gt;</span></pre>
+        <div class="component-specs"><strong>Specs:</strong> grid 1-col → 7fr/5fr desde 1024px · izq con icon-box <code>var(--btn-ink)</code> + h3 negro extrabold + duración mono gris · stats <code>.route-card-stat</code> (default pink / <code>.purple</code> #ECE4FA) · CTA full dark button · der <code>.route-card-aside</code> con fondo <code>var(--surface-cream)</code> + divider dashed + <code>.first-lesson</code> con thumbnail video + play overlay + body con device badge · <code>.route-aside-phase</code> indicator al pie.</div>
+      </article>
+
+      <article class="component">
+        <div class="component-header">
+          <h3>Profile card (.profile-card)</h3>
+          <div class="meta">Tarjeta del equipo con <strong>card chrome</strong> arriba (semáforo + mono label) + body con avatar, nombre, rol en pink mono, bio y chips de link</div>
+        </div>
+        <div class="component-preview">
+          <div style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: center;">
+            <article class="profile-card">
+              <div class="card-chrome">
+                <span class="card-chrome-dot pink"></span>
+                <span class="card-chrome-dot lavender"></span>
+                <span class="card-chrome-dot green"></span>
+                <span class="card-chrome-label">aleja.profile()</span>
+              </div>
+              <div class="profile-card-body">
+                <div class="profile-avatar">AZ</div>
+                <div>
+                  <div class="profile-card-name">Alejandra Zerdá</div>
+                  <div class="profile-card-role">Product Manager</div>
+                </div>
+                <p class="profile-card-bio">Activista del software libre. Cree en la tecnología como herramienta para transformar vidas y empoderar a más mujeres a crear y liderar con datos.</p>
+                <div class="profile-links">
+                  <a href="#" class="profile-link">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20M2 12h20"/></svg>
+                    alejandrazerda.com
+                  </a>
+                  <a href="#" class="profile-link">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
+                    github.com/cangrejadev
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <article class="profile-card">
+              <div class="card-chrome">
+                <span class="card-chrome-dot pink"></span>
+                <span class="card-chrome-dot lavender"></span>
+                <span class="card-chrome-dot green"></span>
+                <span class="card-chrome-label">aura.profile()</span>
+              </div>
+              <div class="profile-card-body">
+                <div class="profile-avatar">AH</div>
+                <div>
+                  <div class="profile-card-name">Aura Hernández V.</div>
+                  <div class="profile-card-role">Data Scientist</div>
+                </div>
+                <p class="profile-card-bio">Construye pipelines, mentorea en Python y lidera iniciativas de MLOps dentro de la comunidad.</p>
+                <div class="profile-links">
+                  <a href="#" class="profile-link">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/></svg>
+                    github.com/aura
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <article class="profile-card">
+              <div class="card-chrome">
+                <span class="card-chrome-dot pink"></span>
+                <span class="card-chrome-dot lavender"></span>
+                <span class="card-chrome-dot green"></span>
+                <span class="card-chrome-label">lina.profile()</span>
+              </div>
+              <div class="profile-card-body">
+                <div class="profile-avatar">LS</div>
+                <div>
+                  <div class="profile-card-name">Lina Serra</div>
+                  <div class="profile-card-role">Analytics Lead</div>
+                </div>
+                <p class="profile-card-bio">Enseña SQL y data storytelling. Cree que una buena visualización vale más que mil queries.</p>
+                <div class="profile-links">
+                  <a href="#" class="profile-link">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/></svg>
+                    linaserra.dev
+                  </a>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+        <pre class="component-code"><span class="k">&lt;article</span> <span class="a">class</span>=<span class="s">"profile-card"</span><span class="k">&gt;</span>
+  <span class="k">&lt;div</span> <span class="a">class</span>=<span class="s">"card-chrome"</span><span class="k">&gt;</span>
+    <span class="k">&lt;span</span> <span class="a">class</span>=<span class="s">"card-chrome-dot pink"</span><span class="k">&gt;&lt;/span&gt;</span>
+    <span class="k">&lt;span</span> <span class="a">class</span>=<span class="s">"card-chrome-dot lavender"</span><span class="k">&gt;&lt;/span&gt;</span>
+    <span class="k">&lt;span</span> <span class="a">class</span>=<span class="s">"card-chrome-dot green"</span><span class="k">&gt;&lt;/span&gt;</span>
+    <span class="k">&lt;span</span> <span class="a">class</span>=<span class="s">"card-chrome-label"</span><span class="k">&gt;</span>aleja.profile()<span class="k">&lt;/span&gt;</span>
+  <span class="k">&lt;/div&gt;</span>
+  <span class="k">&lt;div</span> <span class="a">class</span>=<span class="s">"profile-card-body"</span><span class="k">&gt;</span>
+    <span class="k">&lt;img</span> <span class="a">class</span>=<span class="s">"profile-avatar-img"</span> <span class="a">src</span>=<span class="s">"..."</span><span class="k">&gt;</span>
+    <span class="k">&lt;div</span> <span class="a">class</span>=<span class="s">"profile-card-name"</span><span class="k">&gt;</span>Alejandra Zerdá<span class="k">&lt;/div&gt;</span>
+    <span class="k">&lt;div</span> <span class="a">class</span>=<span class="s">"profile-card-role"</span><span class="k">&gt;</span>Product Manager<span class="k">&lt;/div&gt;</span>
+    <span class="k">&lt;p</span> <span class="a">class</span>=<span class="s">"profile-card-bio"</span><span class="k">&gt;</span>Activista...<span class="k">&lt;/p&gt;</span>
+    <span class="k">&lt;div</span> <span class="a">class</span>=<span class="s">"profile-links"</span><span class="k">&gt;</span>
+      <span class="k">&lt;a</span> <span class="a">class</span>=<span class="s">"profile-link"</span><span class="k">&gt;</span>[svg] alejandrazerda.com<span class="k">&lt;/a&gt;</span>
+    <span class="k">&lt;/div&gt;</span>
+  <span class="k">&lt;/div&gt;</span>
+<span class="k">&lt;/article&gt;</span></pre>
+        <div class="component-specs"><strong>Specs:</strong> width 270px · border 2px <code>var(--btn-ink)</code> · radius <code>var(--r-xl)</code> · <code>.card-chrome</code> dark top strip con 3 dots (pink / lavender / green) + mono label · <code>.profile-avatar</code> fallback con iniciales o <code>.profile-avatar-img</code> con foto · chips de link estilo <code>.profile-link</code>.</div>
+      </article>
+
+      <article class="component">
+        <div class="component-header">
+          <h3>Kicker card (.kicker-card)</h3>
+          <div class="meta">Icono + título + descripción corta · chunky 2px border + 4x4 hard-shadow (consistente con el .btn)</div>
+        </div>
+        <div class="component-preview">
+          <div class="grid grid-3">
+            <div class="kicker-card"><span class="ico">💡</span><div><h3>Algoritmos a diario</h3><p>¿Cómo Spotify sabe qué recomendarte?</p></div></div>
+            <div class="kicker-card"><span class="ico">💰</span><div><h3>Precios dinámicos</h3><p>¿Cómo funcionan las tarifas de Uber?</p></div></div>
+            <div class="kicker-card"><span class="ico">📱</span><div><h3>Experiencias conectadas</h3><p>¿Cómo Amazon decide qué mostrarte?</p></div></div>
+          </div>
+        </div>
+      </article>
+
+      <article class="component">
+        <div class="component-header">
+          <h3>Topic card (.topic-card)</h3>
+          <div class="meta">Destacado tipo "She Data Lab" · 2 columnas (contenido + dataset preview) · badge + status + h3 con avatar + lista de preguntas + CTA</div>
+        </div>
+        <div class="component-preview">
+          <div class="topic-card">
+            <div class="topic-card-main">
+              <div class="topic-card-tags">
+                <span class="topic-card-badge">PROYECTO_ACTIVO#01</span>
+                <span class="topic-card-status">Recolección Abierta</span>
+              </div>
+              <h3>
+                <span class="topic-card-avatar" style="background: var(--pink-light); display: grid; place-items: center;">🎃</span>
+                <span>Halloween Data</span>
+              </h3>
+              <div>
+                <p class="topic-card-quote">"¿Cómo celebramos Halloween y cuánto gastamos?"</p>
+                <p class="topic-card-lede">Estamos construyendo un dataset colaborativo entre la comunidad para analizar patrones de gasto, preferencias de disfraces y costumbres durante Halloween.</p>
+              </div>
+              <div class="topic-card-questions">
+                <div>¿Cuántas personas se disfrazan?</div>
+                <div>¿Cuánto gastan en su disfraz?</div>
+                <div>¿Compras o haces tu disfraz (DIY)?</div>
+                <div>¿Diferencias entre ciudades?</div>
+              </div>
+              <div>
+                <a class="btn btn-primary" href="#">Participar en la encuesta</a>
+              </div>
+            </div>
+            <div class="metric-preview">
+              <div class="metric-preview-head">
+                <span class="metric-preview-title">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v16a2 2 0 0 0 2 2h16"/><path d="M18 17V9M13 17V5M8 17v-3"/></svg>
+                  Dataset Metrics Preview
+                </span>
+                <span class="metric-preview-file">pandas_dataframe.csv</span>
+              </div>
+              <div class="metric-bar pink">
+                <div class="metric-bar-head"><span>Presupuesto $20 – $50 USD</span><span class="pct">58%</span></div>
+                <div class="metric-bar-track"><div class="metric-bar-fill" style="width: 58%;"></div></div>
+              </div>
+              <div class="metric-bar purple">
+                <div class="metric-bar-head"><span>Disfraz Comprado</span><span class="pct">42%</span></div>
+                <div class="metric-bar-track"><div class="metric-bar-fill" style="width: 42%;"></div></div>
+              </div>
+              <div class="metric-bar indigo">
+                <div class="metric-bar-head"><span>Disfraz DIY / Hecho a mano</span><span class="pct">38%</span></div>
+                <div class="metric-bar-track"><div class="metric-bar-fill" style="width: 38%;"></div></div>
+              </div>
+              <div class="metric-preview-tip">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"/></svg>
+                <span>Estructura lista para exportar dataset limpio a Python &amp; Power BI.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <pre class="component-code"><span class="k">&lt;div</span> <span class="a">class</span>=<span class="s">"topic-card"</span><span class="k">&gt;</span>
+  <span class="k">&lt;div</span> <span class="a">class</span>=<span class="s">"topic-card-main"</span><span class="k">&gt;</span>
+    <span class="k">&lt;div</span> <span class="a">class</span>=<span class="s">"topic-card-tags"</span><span class="k">&gt;</span>
+      <span class="k">&lt;span</span> <span class="a">class</span>=<span class="s">"topic-card-badge"</span><span class="k">&gt;</span>PROYECTO_ACTIVO#01<span class="k">&lt;/span&gt;</span>
+      <span class="k">&lt;span</span> <span class="a">class</span>=<span class="s">"topic-card-status"</span><span class="k">&gt;</span>Recolección Abierta<span class="k">&lt;/span&gt;</span>
+    <span class="k">&lt;/div&gt;</span>
+    <span class="k">&lt;h3&gt;&lt;span</span> <span class="a">class</span>=<span class="s">"topic-card-avatar"</span><span class="k">&gt;&lt;img</span>.../<span class="k">&gt;&lt;/span&gt;</span> Halloween Data<span class="k">&lt;/h3&gt;</span>
+    <span class="k">&lt;p</span> <span class="a">class</span>=<span class="s">"topic-card-quote"</span><span class="k">&gt;</span>"¿Cómo celebramos..."<span class="k">&lt;/p&gt;</span>
+    <span class="k">&lt;p</span> <span class="a">class</span>=<span class="s">"topic-card-lede"</span><span class="k">&gt;</span>Estamos construyendo...<span class="k">&lt;/p&gt;</span>
+    <span class="k">&lt;div</span> <span class="a">class</span>=<span class="s">"topic-card-questions"</span><span class="k">&gt;</span>
+      <span class="k">&lt;div&gt;</span>¿Cuántas personas se disfrazan?<span class="k">&lt;/div&gt;</span>
+      ...
+    <span class="k">&lt;/div&gt;</span>
+    <span class="k">&lt;a</span> <span class="a">class</span>=<span class="s">"btn btn-primary"</span><span class="k">&gt;</span>Participar<span class="k">&lt;/a&gt;</span>
+  <span class="k">&lt;/div&gt;</span>
+  <span class="k">&lt;div</span> <span class="a">class</span>=<span class="s">"metric-preview"</span><span class="k">&gt;</span>
+    <span class="k">&lt;div</span> <span class="a">class</span>=<span class="s">"metric-bar pink"</span> ...<span class="k">&gt;&lt;/div&gt;</span>
+    <span class="k">&lt;div</span> <span class="a">class</span>=<span class="s">"metric-bar purple"</span> ...<span class="k">&gt;&lt;/div&gt;</span>
+    <span class="k">&lt;div</span> <span class="a">class</span>=<span class="s">"metric-bar indigo"</span> ...<span class="k">&gt;&lt;/div&gt;</span>
+  <span class="k">&lt;/div&gt;</span>
+<span class="k">&lt;/div&gt;</span></pre>
+        <div class="component-specs"><strong>Specs:</strong> grid 1-col → 7fr/5fr desde 1024px · badge pink filled + status dot verde · h3 con avatar circular 80px border 4px · <code>.metric-preview</code> tres barras color-coded (pink/purple/indigo) + tip pill con sparkles.</div>
+      </article>
+    </section>
+
+    <!-- 14. PATH CARDS -->
+    <section class="page block-section" id="paths">
+      <h2>Learning path cards</h2>
+      <p class="muted">design-system.css · .path-card, .path-card.purple</p>
+      <article class="component">
+        <div class="component-header">
+          <h3>Path card (.path-card)</h3>
+          <div class="meta">Tarjetas de roadmap · fondo <code>--pink-mid</code> o <code>--purple-mid</code>, border 2px, icon-box + badge + meta + CTA oscura al pie</div>
+        </div>
+        <div class="component-preview">
+          <div class="grid grid-2">
+            <div class="path-card">
+              <div class="path-card-head">
+                <span class="path-card-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5V19A9 3 0 0 0 21 19V5"/><path d="M3 12A9 3 0 0 0 21 12"/></svg>
+                </span>
+                <span class="path-card-badge">4-8 semanas</span>
+              </div>
+              <div>
+                <h3>SQL</h3>
+                <p>De cero a nivel intermedio-sólido: el lenguaje que usan casi todas las empresas del mundo para hablar con sus bases de datos.</p>
+              </div>
+              <div class="path-card-meta">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
+                <span>10 fases · 35 micro-pasos con video</span>
+              </div>
+              <a class="path-card-cta" href="#">
+                <span>Empezar roadmap de SQL</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+              </a>
+            </div>
+            <div class="path-card purple">
+              <div class="path-card-head">
+                <span class="path-card-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 2v4M16 2v4M3 10h18"/><rect x="3" y="4" width="18" height="18" rx="2"/></svg>
+                </span>
+                <span class="path-card-badge">6-10 semanas</span>
+              </div>
+              <div>
+                <h3>Python</h3>
+                <p>Automatizá tareas, analizá datasets y empezá a programar como una.</p>
+              </div>
+              <div class="path-card-meta">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
+                <span>12 fases · 40 micro-pasos con video</span>
+              </div>
+              <a class="path-card-cta" href="#">
+                <span>Empezar roadmap de Python</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+        <pre class="component-code"><span class="k">&lt;div</span> <span class="a">class</span>=<span class="s">"path-card"</span><span class="k">&gt;</span>
+  <span class="k">&lt;div</span> <span class="a">class</span>=<span class="s">"path-card-head"</span><span class="k">&gt;</span>
+    <span class="k">&lt;span</span> <span class="a">class</span>=<span class="s">"path-card-icon"</span><span class="k">&gt;</span>[svg]<span class="k">&lt;/span&gt;</span>
+    <span class="k">&lt;span</span> <span class="a">class</span>=<span class="s">"path-card-badge"</span><span class="k">&gt;</span>4-8 semanas<span class="k">&lt;/span&gt;</span>
+  <span class="k">&lt;/div&gt;</span>
+  <span class="k">&lt;div&gt;&lt;h3&gt;</span>SQL<span class="k">&lt;/h3&gt;&lt;p&gt;</span>De cero...<span class="k">&lt;/p&gt;&lt;/div&gt;</span>
+  <span class="k">&lt;div</span> <span class="a">class</span>=<span class="s">"path-card-meta"</span><span class="k">&gt;</span>[svg] 10 fases · 35 micro-pasos<span class="k">&lt;/div&gt;</span>
+  <span class="k">&lt;a</span> <span class="a">class</span>=<span class="s">"path-card-cta"</span> <span class="a">href</span>=<span class="s">"/roadmap/sql"</span><span class="k">&gt;</span>
+    Empezar roadmap de SQL [svg]
+  <span class="k">&lt;/a&gt;</span>
+<span class="k">&lt;/div&gt;</span>
+<span class="k">&lt;div</span> <span class="a">class</span>=<span class="s">"path-card purple"</span><span class="k">&gt;</span>...<span class="k">&lt;/div&gt;</span></pre>
+        <div class="component-specs"><strong>Specs:</strong> fondo <code>var(--pink-mid)</code> (default) o <code>var(--purple-mid)</code> (.purple) · border 2px <code>#27232A</code> · radius <code>var(--r-xl)</code> 16px · icon-box 48×48 blanco/90 con border · badge y meta sobre fondo blanco translúcido · CTA full-width <code>var(--btn-ink)</code>.</div>
+      </article>
+    </section>
+
+    <!-- 15. PROGRESS / POLL -->
+    <section class="page block-section" id="progress">
+      <h2>Progress / poll</h2>
+      <p class="muted">design-system.css · .poll + .progress</p>
+      <article class="component">
+        <div class="component-header">
+          <h3>Poll (.poll + .progress)</h3>
+          <div class="meta">Resultados de encuesta con barras y porcentaje</div>
+        </div>
+        <div class="component-preview">
+          <div class="poll">
+            <p class="q">¿Cómo celebrás Halloween? · 128 respuestas</p>
+            <div class="progress" style="--w: 56%;">
+              <span class="label">Me disfrazo</span>
+              <span class="pct">56%</span>
+              <span class="bar"></span>
+            </div>
+            <div class="progress" style="--w: 42%;">
+              <span class="label">Noche de pelis de terror</span>
+              <span class="pct">42%</span>
+              <span class="bar"></span>
+            </div>
+            <div class="progress" style="--w: 18%;">
+              <span class="label">Nada, otro día más</span>
+              <span class="pct">18%</span>
+              <span class="bar"></span>
+            </div>
+          </div>
+        </div>
+        <pre class="component-code"><span class="k">&lt;div</span> <span class="a">class</span>=<span class="s">"progress"</span> <span class="a">style</span>=<span class="s">"--w: 56%;"</span><span class="k">&gt;</span>
+  <span class="k">&lt;span</span> <span class="a">class</span>=<span class="s">"label"</span><span class="k">&gt;</span>Me disfrazo<span class="k">&lt;/span&gt;</span>
+  <span class="k">&lt;span</span> <span class="a">class</span>=<span class="s">"pct"</span><span class="k">&gt;</span>56%<span class="k">&lt;/span&gt;</span>
+  <span class="k">&lt;span</span> <span class="a">class</span>=<span class="s">"bar"</span><span class="k">&gt;&lt;/span&gt;</span>
+<span class="k">&lt;/div&gt;</span></pre>
+      </article>
+    </section>
+
+    <!-- 16. FORMS -->
+    <section class="page block-section" id="forms">
+      <h2>Forms &amp; inputs</h2>
+      <p class="muted">design-system.css · .field, .input, .select, .chip-check · WCAG AA, focus 3px</p>
+
+      <article class="component">
+        <div class="component-header">
+          <h3>Text input (.field + .input)</h3>
+          <div class="meta">Label medium + input radius 4px · focus rosa</div>
+        </div>
+        <div class="component-preview" style="max-width: 420px;">
+          <div class="field">
+            <label for="demo-name">Tu nombre</label>
+            <input class="input" id="demo-name" type="text" placeholder="¿Cómo te llamas?">
+          </div>
+          <div class="field">
+            <label for="demo-mail">Correo</label>
+            <input class="input" id="demo-mail" type="email" placeholder="tucorreo@ejemplo.com">
+          </div>
+        </div>
+        <pre class="component-code"><span class="k">&lt;div</span> <span class="a">class</span>=<span class="s">"field"</span><span class="k">&gt;</span>
+  <span class="k">&lt;label</span> <span class="a">for</span>=<span class="s">"name"</span><span class="k">&gt;</span>Tu nombre<span class="k">&lt;/label&gt;</span>
+  <span class="k">&lt;input</span> <span class="a">class</span>=<span class="s">"input"</span> <span class="a">id</span>=<span class="s">"name"</span> <span class="a">type</span>=<span class="s">"text"</span><span class="k">&gt;</span>
+<span class="k">&lt;/div&gt;</span></pre>
+      </article>
+
+      <article class="component">
+        <div class="component-header">
+          <h3>Select (.field + .select)</h3>
+          <div class="meta">Flecha custom en rosa · appearance none</div>
+        </div>
+        <div class="component-preview" style="max-width: 420px;">
+          <div class="field">
+            <label for="demo-age">Edad</label>
+            <select class="select" id="demo-age">
+              <option>Elegí un rango</option>
+              <option>18 – 24</option>
+              <option>25 – 34</option>
+              <option>35 – 44</option>
+              <option>45+</option>
+            </select>
+          </div>
+        </div>
+      </article>
+
+      <article class="component">
+        <div class="component-header">
+          <h3>Chip check (.chip-grid + .chip-check)</h3>
+          <div class="meta">Checkboxes grandes para selección múltiple · min 44px alto</div>
+        </div>
+        <div class="component-preview" style="max-width: 420px;">
+          <div class="field">
+            <label>Sector de interés</label>
+            <div class="chip-grid">
+              <label class="chip-check">🌱 Ambiental <input type="checkbox"></label>
+              <label class="chip-check selected">🧪 Salud <input type="checkbox" checked></label>
+              <label class="chip-check">📊 Negocios <input type="checkbox"></label>
+              <label class="chip-check">💻 Tecnología <input type="checkbox"></label>
+              <label class="chip-check">🎓 Estudiante <input type="checkbox"></label>
+              <label class="chip-check">✨ Otro <input type="checkbox"></label>
+            </div>
+          </div>
+        </div>
+        <pre class="component-code"><span class="k">&lt;div</span> <span class="a">class</span>=<span class="s">"chip-grid"</span><span class="k">&gt;</span>
+  <span class="k">&lt;label</span> <span class="a">class</span>=<span class="s">"chip-check"</span><span class="k">&gt;</span>🌱 Ambiental <span class="k">&lt;input</span> <span class="a">type</span>=<span class="s">"checkbox"</span><span class="k">&gt;&lt;/label&gt;</span>
+<span class="k">&lt;/div&gt;</span></pre>
+      </article>
+    </section>
+
+    <!-- 17. MODAL -->
+    <section class="page block-section" id="modal">
+      <h2>Modal / dialog</h2>
+      <p class="muted">design-system.css · .modal + .modal-head</p>
+      <article class="component">
+        <div class="component-header">
+          <h3>Waitlist modal (.modal)</h3>
+          <div class="meta">Diálogo con kicker, close, lede y formulario</div>
+        </div>
+        <div class="component-preview" style="padding: var(--sp-xl); background: rgba(26, 26, 26, 0.08); display: flex; justify-content: center;">
+          <div class="modal">
+            <div class="modal-head">
+              <span class="kicker">● she_data_app.waitlist</span>
+              <button class="close" aria-label="Cerrar">×</button>
+            </div>
+            <h2>Sé de las primeras en probar la app 🎀</h2>
+            <p class="lede">Racha diaria, lecciones según <strong>tu carrera</strong>, y hasta prácticas para presentarle tus datos a un "CEO".</p>
+            <div class="field">
+              <label for="m-name">Tu nombre</label>
+              <input class="input" id="m-name" type="text" placeholder="¿Cómo te llamas?">
+            </div>
+            <div class="field">
+              <label for="m-mail">Correo</label>
+              <input class="input" id="m-mail" type="email" placeholder="tucorreo@ejemplo.com">
+            </div>
+            <div class="field">
+              <label>Sector de interés</label>
+              <div class="chip-grid">
+                <label class="chip-check">🌱 Ambiental</label>
+                <label class="chip-check selected">🧪 Salud</label>
+                <label class="chip-check">📊 Negocios</label>
+                <label class="chip-check">💻 Tecnología</label>
+              </div>
+            </div>
+            <a class="btn btn-primary btn-lg" href="#" style="width: 100%;">Unirme a la lista de espera →</a>
+            <p style="text-align: center; margin: var(--sp-sm) 0 0;"><a class="text-btn" href="#">ahora no, gracias</a></p>
+          </div>
+        </div>
+        <pre class="component-code"><span class="k">&lt;div</span> <span class="a">class</span>=<span class="s">"modal"</span><span class="k">&gt;</span>
+  <span class="k">&lt;div</span> <span class="a">class</span>=<span class="s">"modal-head"</span><span class="k">&gt;</span>
+    <span class="k">&lt;span</span> <span class="a">class</span>=<span class="s">"kicker"</span><span class="k">&gt;</span>● she_data_app.waitlist<span class="k">&lt;/span&gt;</span>
+    <span class="k">&lt;button</span> <span class="a">class</span>=<span class="s">"close"</span><span class="k">&gt;</span>×<span class="k">&lt;/button&gt;</span>
+  <span class="k">&lt;/div&gt;</span>
+  <span class="k">&lt;h2&gt;</span>Sé de las primeras...<span class="k">&lt;/h2&gt;</span>
+  <span class="c">&lt;!-- fields --&gt;</span>
+  <span class="k">&lt;a</span> <span class="a">class</span>=<span class="s">"btn btn-primary btn-lg"</span><span class="k">&gt;</span>Unirme →<span class="k">&lt;/a&gt;</span>
+<span class="k">&lt;/div&gt;</span></pre>
+      </article>
+    </section>
+
+    <!-- 18. SECTION LAYOUTS -->
+    <section class="page block-section" id="sections">
+      <h2>Section layouts</h2>
+      <p class="muted">design-system.css · .section, .section.cream, .section.dark</p>
+      <article class="component">
+        <div class="component-header">
+          <h3>Section backgrounds</h3>
+          <div class="meta">Alternancia surface → cream → dark para ritmo visual</div>
+        </div>
+        <div class="component-preview" style="padding: 0;">
+          <div class="section" style="padding: var(--sp-xl) var(--sp-lg);">
+            <span class="section-eyebrow">◆ 1 de 3</span>
+            <h2>Section surface (default)</h2>
+            <p>Fondo <code>var(--surface)</code> · fondo principal.</p>
+          </div>
+          <div class="section cream" style="padding: var(--sp-xl) var(--sp-lg);">
+            <span class="section-eyebrow">◆ 2 de 3</span>
+            <h2>Section cream</h2>
+            <p>Fondo <code>var(--pink-lightest)</code> · separa bloques.</p>
+          </div>
+          <div class="section dark" style="padding: var(--sp-xl) var(--sp-lg);">
+            <span class="section-eyebrow" style="background: var(--brand-primary); color: #FFF; border-color: var(--brand-primary);">◆ 3 de 3</span>
+            <h2>Section dark</h2>
+            <p style="color: var(--pink-light);">Fondo <code>var(--brand-dark)</code> · destaca momentos clave.</p>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <!-- 19. VOICE / TONE -->
+    <section class="page block-section" id="voice">
+      <h2>Voz &amp; tono</h2>
+      <p class="muted">Conversacional · vulnerablemente honesta · celebradora de procesos</p>
+
+      <div class="grid grid-2">
+        <div class="card" style="border-color: var(--success); background: #F0FBF6;">
+          <span class="card-eyebrow" style="color: #0A6B3F;"><span class="ico" style="background: #D6F5E3; color: #0A6B3F;">✓</span> Hacé así</span>
+          <ul style="padding-left: 1.1em; margin: 0;">
+            <li>"No naciste sabiendo Python(). Nosotras tampoco."</li>
+            <li>"no sabía que lo necesitaba hasta que entré"</li>
+            <li>"siento que encontré mi comunidad"</li>
+            <li>"estoy amando con locura todo lo que pasa con la comunidad"</li>
+          </ul>
+        </div>
+        <div class="card" style="border-color: #E5A5B5; background: #FFF4F6;">
+          <span class="card-eyebrow" style="color: #B22;"><span class="ico" style="background: #FFD4DB; color: #B22;">✗</span> Evitá</span>
+          <ul style="padding-left: 1.1em; margin: 0;">
+            <li>"Soluciones disruptivas de data science"</li>
+            <li>"Únete a las élites tech"</li>
+            <li>Frases impersonales u ocultan vulnerabilidad</li>
+            <li>Tecnicismos innecesarios</li>
+          </ul>
+        </div>
+      </div>
+
+      <h3 style="margin-top: var(--sp-xl);">Tema "Brujas"</h3>
+      <p>Úsalo para campañas estacionales (octubre), contenido de comunidad y eventos especiales. Es un tema recurrente, no la marca principal.</p>
+      <div class="grid grid-3" style="margin-top: var(--sp-md);">
+        <div class="card" style="background: var(--purple-light);">
+          <h3 style="color: var(--brand-secondary);"><span class="sparkle purple">✦</span> Brujas de los datos</h3>
+          <p>Transformamos datos crudos en respuestas con un toque de magia.</p>
+        </div>
+        <div class="card">
+          <h3><span class="sparkle">✦</span> Hitos</h3>
+          <p>Momentos de celebración y pertenencia dentro de la comunidad.</p>
+        </div>
+        <div class="card">
+          <h3><span class="sparkle purple">✦</span> Magia + técnica</h3>
+          <p>Empoderamiento con rigor. No somos solo brujas ni solo tech.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 20. ACCESSIBILITY -->
+    <section class="page block-section" id="a11y">
+      <h2>Accesibilidad</h2>
+      <p class="muted">WCAG AA · todos los componentes</p>
+      <table class="scale-table">
+        <thead><tr><th>Regla</th><th>Mínimo</th><th>Dónde</th></tr></thead>
+        <tbody>
+          <tr><td>Contraste texto pequeño</td><td>4.5:1</td><td>Body, labels, badges</td></tr>
+          <tr><td>Contraste texto grande</td><td>3:1</td><td>H1, H2, CTAs grandes</td></tr>
+          <tr><td>Tamaño mínimo fuente</td><td>14px</td><td>Captions, metadata</td></tr>
+          <tr><td>Área de contacto</td><td>44 × 44px</td><td>Botones, chips, icon-btn</td></tr>
+          <tr><td>Alt text</td><td>Siempre</td><td>Imágenes decorativas o informativas</td></tr>
+          <tr><td>Focus ring</td><td>3px rosa</td><td>Todo elemento interactivo</td></tr>
+          <tr><td>Modo oscuro</td><td>Soportado</td><td><code>[data-theme="dark"]</code></td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- 21. FOOTER -->
+    <section class="page block-section" id="footer">
+      <h2>Footer</h2>
+      <p class="muted">design-system.css · .footer + .footer-quote + .footer-row</p>
+      <article class="component">
+        <div class="component-header">
+          <h3>Footer completo (.footer + .footer-top + .footer-nav + .footer-bottom)</h3>
+          <div class="meta">Fondo <code>var(--btn-ink)</code> · brand badge con esquina asimétrica · nav mono con <code>--</code> prefix gris + hover pastel · separador dashed + copyright con <code>#</code> pink</div>
+        </div>
+        <div class="component-preview" style="padding: 0;">
+          <footer class="footer" style="margin-top: 0;">
+            <div style="max-width: var(--page-w); margin: 0 auto;">
+              <div class="footer-top">
+                <div class="footer-brand">
+                  <span class="logo-mark"><img src="assets/logo.png" alt="She Data"></span>
+                  <span class="footer-brand-badge">Shedata</span>
+                </div>
+                <nav class="footer-nav" aria-label="Footer preview">
+                  <a href="#">inicio</a>
+                  <a href="#">roadmaps</a>
+                  <a href="#">recursos</a>
+                  <a href="#">curiosidades</a>
+                  <a href="#">proyectos</a>
+                  <a href="#">foro</a>
+                </nav>
+              </div>
+              <div class="footer-bottom">
+                <p><span class="hash">#</span> "aprendemos, compartimos y creamos con datos."</p>
+                <p>© 2026 She Data Community. Todos los derechos reservados.</p>
+              </div>
+            </div>
+          </footer>
+        </div>
+        <pre class="component-code"><span class="k">&lt;footer</span> <span class="a">class</span>=<span class="s">"footer"</span><span class="k">&gt;</span>
+  <span class="k">&lt;div</span> <span class="a">class</span>=<span class="s">"footer-top"</span><span class="k">&gt;</span>
+    <span class="k">&lt;div</span> <span class="a">class</span>=<span class="s">"footer-brand"</span><span class="k">&gt;</span>
+      <span class="k">&lt;span</span> <span class="a">class</span>=<span class="s">"logo-mark"</span><span class="k">&gt;&lt;img.../&gt;&lt;/span&gt;</span>
+      <span class="k">&lt;span</span> <span class="a">class</span>=<span class="s">"footer-brand-badge"</span><span class="k">&gt;</span>Shedata<span class="k">&lt;/span&gt;</span>
+    <span class="k">&lt;/div&gt;</span>
+    <span class="k">&lt;nav</span> <span class="a">class</span>=<span class="s">"footer-nav"</span><span class="k">&gt;</span>
+      <span class="k">&lt;a</span> <span class="a">href</span>=<span class="s">"#"</span><span class="k">&gt;</span>inicio<span class="k">&lt;/a&gt;</span>
+      ...
+    <span class="k">&lt;/nav&gt;</span>
+  <span class="k">&lt;/div&gt;</span>
+  <span class="k">&lt;div</span> <span class="a">class</span>=<span class="s">"footer-bottom"</span><span class="k">&gt;</span>
+    <span class="k">&lt;p&gt;&lt;span</span> <span class="a">class</span>=<span class="s">"hash"</span><span class="k">&gt;</span>#<span class="k">&lt;/span&gt;</span> "..."<span class="k">&lt;/p&gt;</span>
+    <span class="k">&lt;p&gt;</span>© 2026 She Data Community<span class="k">&lt;/p&gt;</span>
+  <span class="k">&lt;/div&gt;</span>
+<span class="k">&lt;/footer&gt;</span></pre>
+      </article>
+    </section>
+
+  </main>
+
+  <!-- Real footer -->
+  <footer class="footer">
+    <div style="max-width: var(--page-w); margin: 0 auto;">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <span class="logo-mark"><img src="assets/logo.png" alt="She Data"></span>
+          <span class="footer-brand-badge">Shedata</span>
+        </div>
+        <nav class="footer-nav" aria-label="Footer">
+          <a href="#brand">marca</a>
+          <a href="#colors">color</a>
+          <a href="#typography">tipografia</a>
+          <a href="#buttons">botones</a>
+          <a href="#cards">cards</a>
+          <a href="#forms">forms</a>
+          <a href="#values">valores</a>
+          <a href="#voice">voz</a>
+        </nav>
+      </div>
+      <div class="footer-bottom">
+        <p><span class="hash">#</span> "aprendemos, compartimos y creamos con datos."</p>
+        <p>© 2026 She Data Community · Design System v1.0</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Theme toggle
+    const themeToggle = document.getElementById('themeToggle');
+    const root = document.documentElement;
+
+    function initTheme() {
+      try {
+        const saved = localStorage.getItem('shedata-theme');
+        if (saved === 'dark' || saved === 'light') {
+          root.setAttribute('data-theme', saved);
+        } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+          root.setAttribute('data-theme', 'dark');
+        }
+      } catch (e) {}
+    }
+    function toggleTheme() {
+      const current = root.getAttribute('data-theme') || 'light';
+      const next = current === 'dark' ? 'light' : 'dark';
+      root.setAttribute('data-theme', next);
+      try { localStorage.setItem('shedata-theme', next); } catch (e) {}
+    }
+    themeToggle.addEventListener('click', toggleTheme);
+    initTheme();
+
+    // Language switcher (visual only)
+    document.querySelectorAll('.lang-switch').forEach(group => {
+      const btns = group.querySelectorAll('button');
+      btns.forEach(btn => btn.addEventListener('click', () => {
+        btns.forEach(b => b.setAttribute('aria-pressed', 'false'));
+        btn.setAttribute('aria-pressed', 'true');
+      }));
+    });
+
+    // Chips (single select)
+    document.querySelectorAll('.chip').forEach(chip => {
+      chip.addEventListener('click', () => {
+        const siblings = chip.parentElement.querySelectorAll('.chip');
+        siblings.forEach(c => c.classList.remove('active'));
+        chip.classList.add('active');
+      });
+    });
+
+    // Chip-check (toggle)
+    document.querySelectorAll('.chip-check').forEach(c => {
+      c.addEventListener('click', (e) => {
+        if (e.target.tagName !== 'INPUT') {
+          c.classList.toggle('selected');
+        }
+      });
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,157 @@
+/* ==========================================================================
+   SHE DATA — Design Tokens & Base
+   Color palette, type scale, spacing, radii, shadows, layout vars.
+   Imports: nothing. Pair with componentes.css for the component layer.
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. TOKENS
+   -------------------------------------------------------------------------- */
+:root {
+  /* ---- Brand colors ---- */
+  --brand-primary: #D51E74;      /* Rosa fucsia · botones, enlaces */
+  --brand-dark: #1A1A1A;         /* Negro de .TECH · encabezados */
+  --brand-secondary: #8B4789;    /* Púrpura profundo · tema brujas */
+
+  /* ---- Support colors ---- */
+  --pink-mid: #F48FB1;           /* Fondos de cards tipo path card */
+  --pink-light: #F0B8D4;         /* Fondos suaves, hover */
+  --pink-lightest: #FDE8F3;      /* Fondos sutiles, overlays */
+  --purple-light: #C9B6E4;       /* Decoraciones, tema brujas */
+  --purple-mid: #D1A5C7;         /* Equivalente a pink-mid para variantes púrpura */
+  --success: #34D399;            /* Confirmaciones, progreso */
+
+  /* ---- Neutrals ---- */
+  --surface: #F8F7FB;            /* Fondo principal */
+  --surface-dark: #F0EEF7;       /* Fondos secundarios, cards */
+  --surface-pure: #FFFFFF;       /* Blanco puro */
+  --surface-cream: #FFF8FC;      /* Rosa casi blanco · topbar, asides */
+  --text-primary: #2D2D2D;       /* Cuerpo de texto */
+  --text-secondary: #6B6B6B;     /* Etiquetas, pies */
+  --border: #D4D0E0;             /* Líneas, divisores */
+
+  /* ---- Semantic aliases ---- */
+  --brand: var(--brand-primary);
+  --brand-hover: #B01960;        /* Oscurecer 10% */
+
+  /* ---- Code box ---- */
+  --code-bg: #2D2D3A;
+  --code-text: #F5F5F5;
+
+  /* ---- Button ink (chunky border + hard shadow) ---- */
+  --btn-ink: #27232A;            /* Warmer dark · usado por .btn border + shadow */
+
+  /* ---- Typography ---- */
+  /* Matches shedata.tech's Google Fonts stack: Space Grotesk + Caveat + JetBrains Mono */
+  --f-head: "Space Grotesk", system-ui, sans-serif;
+  --f-body: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Apple Color Emoji", "Segoe UI Emoji", sans-serif;
+  --f-hand: "Caveat", cursive;
+  --f-mono: "JetBrains Mono", "Courier New", "Monaco", ui-monospace, monospace;
+
+  /* ---- Type scale ---- */
+  --fs-h1: 36px;
+  --fs-h2: 28px;
+  --fs-h3: 22px;
+  --fs-body-lg: 18px;
+  --fs-body: 16px;
+  --fs-body-sm: 14px;
+  --fs-caption: 12px;
+  --lh-head: 1.2;
+  --lh-body: 1.5;
+
+  /* ---- Weights ---- */
+  --fw-h1: 700;
+  --fw-h2: 700;
+  --fw-h3: 600;
+  --fw-body: 400;
+
+  /* ---- Spacing ---- */
+  --sp-xs: 4px;
+  --sp-sm: 8px;
+  --sp-md: 16px;
+  --sp-lg: 24px;
+  --sp-xl: 32px;
+  --sp-2xl: 48px;
+
+  /* ---- Radius ---- */
+  --r-xs: 2px;
+  --r-sm: 4px;
+  --r-md: 8px;
+  --r-lg: 12px;        /* rounded-xl en tailwind — botones principales */
+  --r-xl: 16px;        /* rounded-2xl — cards grandes (path, profile) */
+  --r-full: 999px;
+
+  /* ---- Shadow ---- */
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 4px 12px rgba(26, 26, 26, 0.08);
+  --shadow-lg: 0 10px 32px rgba(213, 30, 116, 0.14);
+  --shadow-focus: 0 0 0 3px rgba(213, 30, 116, 0.22);
+
+  /* ---- Layout ---- */
+  --page-w: 1120px;
+  --gutter: 24px;
+}
+
+[data-theme="dark"] {
+  --brand-primary: #FF5FA8;
+  --brand-dark: #F5F5F5;
+  --brand-secondary: #C197CF;
+  --purple-light: #D8CAEE;
+  --pink-lightest: #2A1A24;
+  --pink-light: #4A2340;
+  --success: #6EE7B7;
+  --surface: #1A1A1F;
+  --surface-dark: #25242B;
+  --surface-pure: #15151A;
+  --text-primary: #F5F5F5;
+  --text-secondary: #A8A8B8;
+  --border: #3D3D47;
+  --brand-hover: #FF8CC0;
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.4);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 10px 32px rgba(255, 95, 168, 0.2);
+}
+
+/* --------------------------------------------------------------------------
+   2. BASE
+   -------------------------------------------------------------------------- */
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  font-family: var(--f-body);
+  font-size: var(--fs-body);
+  line-height: var(--lh-body);
+  color: var(--text-primary);
+  background: var(--surface);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--f-head);
+  color: var(--brand-dark);
+  line-height: var(--lh-head);
+  margin: 0 0 var(--sp-sm);
+}
+h1 { font-size: var(--fs-h1); font-weight: var(--fw-h1); }
+h2 { font-size: var(--fs-h2); font-weight: var(--fw-h2); }
+h3 { font-size: var(--fs-h3); font-weight: var(--fw-h3); }
+
+p { margin: 0 0 var(--sp-md); }
+
+a { color: var(--brand-primary); text-decoration-color: var(--pink-light); text-underline-offset: 3px; }
+a:hover { color: var(--brand-hover); }
+
+code { font-family: var(--f-mono); font-size: 0.95em; background: var(--surface-dark); padding: 2px 6px; border-radius: var(--r-sm); }
+
+.muted, .text-secondary { color: var(--text-secondary); font-size: var(--fs-body-sm); }
+.caption { font-size: var(--fs-caption); color: var(--text-secondary); }
+
+/* --------------------------------------------------------------------------
+   3. RESPONSIVE (base scale)
+   -------------------------------------------------------------------------- */
+@media (max-width: 640px) {
+  :root { --fs-h1: 28px; --fs-h2: 22px; --fs-h3: 18px; }
+}

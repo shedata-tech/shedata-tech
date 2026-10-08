@@ -1,0 +1,228 @@
+/* ==========================================================================
+   SHE DATA — Showcase page layout
+   Styles specific to componentes-showcase.html — NOT part of the design
+   system. Documentation shell: previews, code blocks, swatches, TOC.
+   Depends on design-system.css for tokens.
+   ========================================================================== */
+
+.page {
+  max-width: var(--page-w);
+  margin: 0 auto;
+  padding: 0 var(--gutter);
+}
+.block-section {
+  padding: var(--sp-2xl) 0;
+  border-bottom: 1px solid var(--border);
+}
+.block-section > h2 { margin: 0 0 var(--sp-xs); }
+.block-section > .muted {
+  font-family: var(--f-mono);
+  font-size: var(--fs-caption);
+  margin-bottom: var(--sp-lg);
+}
+
+.hero-section {
+  padding: 72px 0 var(--sp-2xl);
+  background:
+    radial-gradient(circle at 12% 10%, var(--pink-lightest) 0, transparent 55%),
+    radial-gradient(circle at 92% 18%, var(--purple-light) 0, transparent 50%),
+    var(--surface);
+}
+
+/* ---------- Component cards ---------- */
+.component {
+  margin-bottom: var(--sp-lg);
+  border: 1px solid var(--border);
+  border-radius: var(--r-md);
+  box-shadow: var(--shadow-sm);
+  background: var(--surface-pure);
+  overflow: hidden;
+}
+.component-header {
+  padding: 14px 20px;
+  border-bottom: 1px solid var(--border);
+  background: var(--surface-dark);
+}
+.component-header h3 {
+  font-size: var(--fs-body-lg);
+  font-weight: 600;
+  font-family: var(--f-head);
+  color: var(--brand-dark);
+  margin: 0 0 4px;
+}
+.component-header .meta {
+  font-family: var(--f-mono);
+  font-size: var(--fs-caption);
+  color: var(--text-secondary);
+}
+.component-preview {
+  padding: var(--sp-lg);
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+}
+.component-code {
+  background: var(--code-bg);
+  color: var(--code-text);
+  font-family: var(--f-mono);
+  font-size: 12.5px;
+  line-height: 1.55;
+  padding: 20px 22px;
+  overflow-x: auto;
+  margin: 0;
+  white-space: pre;
+}
+.component-code .k { color: #F9A8D4; }  /* tag / keyword */
+.component-code .a { color: #C9B6E4; }  /* attribute */
+.component-code .s { color: #B2E8A3; }  /* string */
+.component-code .c { color: #7A6A72; font-style: italic; }
+.component-specs {
+  padding: 14px 20px;
+  font-family: var(--f-body);
+  font-size: var(--fs-body-sm);
+  color: var(--text-secondary);
+  background: var(--surface-dark);
+}
+.component-specs code { font-family: var(--f-mono); font-size: 12px; }
+.component-specs strong { color: var(--brand-dark); font-weight: 600; }
+
+/* ---------- Color palette grid ---------- */
+.color-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+  gap: var(--sp-md);
+  margin-top: var(--sp-md);
+}
+.color-card {
+  background: var(--surface-pure);
+  border: 1px solid var(--border);
+  border-radius: var(--r-md);
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+}
+.color-swatch { height: 90px; border-bottom: 1px solid var(--border); }
+.color-info { padding: 10px 14px 12px; }
+.color-name {
+  font-family: var(--f-head);
+  font-weight: 600;
+  font-size: var(--fs-body-sm);
+  color: var(--brand-dark);
+  margin-bottom: 2px;
+}
+.color-hex {
+  font-family: var(--f-mono);
+  font-size: 11.5px;
+  color: var(--text-secondary);
+}
+.color-group-label {
+  grid-column: 1 / -1;
+  font-family: var(--f-mono);
+  font-size: var(--fs-caption);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--brand-primary);
+  margin-top: var(--sp-sm);
+}
+
+/* ---------- Typography samples ---------- */
+.type-sample {
+  background: var(--surface-pure);
+  border: 1px solid var(--border);
+  border-radius: var(--r-md);
+  box-shadow: var(--shadow-sm);
+  padding: 20px 24px;
+  margin-bottom: var(--sp-sm);
+}
+.type-label {
+  font-family: var(--f-mono);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--brand-primary);
+  margin-bottom: var(--sp-sm);
+}
+
+/* ---------- Scale table ---------- */
+.scale-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: var(--sp-md);
+  background: var(--surface-pure);
+  border: 1px solid var(--border);
+  border-radius: var(--r-md);
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+}
+.scale-table th, .scale-table td {
+  padding: 12px 16px;
+  text-align: left;
+  border-bottom: 1px solid var(--border);
+  font-size: var(--fs-body-sm);
+}
+.scale-table th {
+  background: var(--surface-dark);
+  font-family: var(--f-mono);
+  font-size: var(--fs-caption);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-secondary);
+}
+.scale-table tr:last-child td { border-bottom: none; }
+.scale-table .sample { font-family: var(--f-head); color: var(--brand-dark); }
+.scale-table .tok { font-family: var(--f-mono); font-size: 12.5px; color: var(--brand-primary); }
+
+/* ---------- Spacing / radius visualizers ---------- */
+.sp-grid, .r-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: var(--sp-md);
+  margin-top: var(--sp-md);
+}
+.sp-card, .r-card {
+  background: var(--surface-pure);
+  border: 1px solid var(--border);
+  border-radius: var(--r-md);
+  box-shadow: var(--shadow-sm);
+  padding: var(--sp-md);
+  text-align: center;
+}
+.sp-swatch {
+  background: var(--brand-primary);
+  height: 24px;
+  margin: 0 auto var(--sp-sm);
+  border-radius: 2px;
+}
+.r-swatch {
+  width: 100%;
+  height: 60px;
+  background: var(--brand-primary);
+  margin-bottom: var(--sp-sm);
+}
+.sp-name, .r-name {
+  font-family: var(--f-head);
+  font-weight: 600;
+  color: var(--brand-dark);
+  font-size: var(--fs-body-sm);
+}
+.sp-value, .r-value {
+  font-family: var(--f-mono);
+  font-size: 11.5px;
+  color: var(--text-secondary);
+}
+
+/* ---------- Table of contents ---------- */
+.toc {
+  background: var(--surface-pure);
+  border: 1px solid var(--border);
+  border-radius: var(--r-md);
+  box-shadow: var(--shadow-sm);
+  padding: 20px 24px;
+  margin-top: var(--sp-lg);
+}
+.toc strong { font-family: var(--f-head); color: var(--brand-dark); font-size: var(--fs-body-lg); }
+.toc ol { margin: var(--sp-sm) 0 0; padding-left: 1.2em; columns: 2; column-gap: 24px; }
+.toc li { padding: 4px 0; break-inside: avoid; }
+.toc a { font-family: var(--f-body); font-size: var(--fs-body-sm); color: var(--text-primary); text-decoration: none; }
+.toc a:hover { color: var(--brand-primary); }
+
+@media (max-width: 640px) { .toc ol { columns: 1; } }
